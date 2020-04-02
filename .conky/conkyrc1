@@ -1,0 +1,41 @@
+# Conky settings #
+##########################
+use_xft yes
+##########################
+background yes
+own_window yes
+override_utf8_locale yes
+update_interval 2
+total_run_times 0
+own_window_class conky
+own_window_type override
+own_window_transparent no
+own_window_argb_visual yes
+own_window_argb_value 100
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+double_buffer yes
+minimum_size 390 5
+maximum_width 390
+draw_shades no
+draw_outline no
+draw_borders yes
+border_width 1
+draw_graph_borders yes
+default_shade_color black
+default_outline_color green
+alignment top_left
+gap_x 30
+gap_y 60
+no_buffers yes
+uppercase no
+cpu_avg_samples 2
+
+TEXT
+${font Source Code Pro Semibold:size=10}Calendar ${hr 1}
+
+${exec calcurse -Q --days 7}
+${voffset 1}
+${font Source Code Pro Semibold:size=10}Projects ${hr 1}
+${execpi 30 ~/Scripts/todo/todo.sh -@+d ~/Scripts/todo/conky-todo.cfg listproj}
+${font Source Code Pro Semibold:size=10}Contexts ${hr 1}
+${execpi 30 ~/Scripts/todo/todo.sh -@+d ~/Scripts/todo/conky-todo.cfg listcon}

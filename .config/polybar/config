@@ -2,17 +2,17 @@
 margin-top = 0
 margin-bottom = 0
 
+
 [settings]
 screenchange-reload = true
-
 compositing-background = source
 compositing-foreground = over
 compositing-overline = over
 compositing-underline = over
 compositing-border = over
 
-[colors]
 
+[colors]
 background = ${xrdb:color0:#FFF}
 foreground = ${xrdb:color15}
 main = ${xrdb:color1}
@@ -21,7 +21,6 @@ accent = ${xrdb:color5}
 contrast = ${xrdb:color0}
 
 [bar/base]
-
 background = ${colors.background}
 foreground = ${colors.foreground}
 overline-color = ${colors.main}
@@ -31,8 +30,8 @@ fixed-center = true
 bottom = false
 width = 100%
 height = 20
-overline-size = 2
-border-size = 4
+overline-size = 4
+border-size = 6
 padding = 1
 module-margin-left = 0
 module-margin-right = 0
@@ -47,29 +46,15 @@ modules-left = date polypomo openweathermap-fullfeatured todo
 modules-center = i3
 modules-right = filesystem wlan eth cpu memory temperature pulseaudio backlight battery
 
-; The separator will be inserted between the output of each module
 separator =
-; Available positions: left, center, right, none
 tray-position = none
-
-; If true, the bar will not shift its
-; contents when the tray changes
 tray-detached = false
-
-; Tray icon max size
 tray-maxsize = 16
-
-; Tray offset defined as pixel value (e.g. 35) or percentage (e.g. 50%)
 tray-offset-x = 0
 tray-offset-y = 0
-
-; Pad the sides of each tray icon
 tray-padding = 0
-
-; Scale factor for tray clients
 tray-scale = 1.0
 
-; Opacity value between 0.0 and 1.0 used on fade in/out
 dim-value = 1.0
 
 cursor-click = pointer
@@ -78,11 +63,6 @@ cursor-scroll = ns-resize
 [module/i3]
 type = internal/i3
 
-; ws-icon-[0-9]+ = label;icon
-; NOTE: The label needs to match the name of the i3 workspace
-; NOTE: You cannot skip icons, e.g. to get a ws-icon-6
-; you must also define a ws-icon-5.
-; NOTE: Icon will be available as the %icon% token inside label-*
 ws-icon-0 = 1;1
 ws-icon-1 = 2;2
 ws-icon-2 = 3;3
@@ -122,6 +102,7 @@ label-urgent-background = #FF0000
 label-urgent-foreground = #FFFFFF
 label-urgent-padding = 2
 
+
 [module/wlan]
 type = internal/network
 interface = wlo1
@@ -130,37 +111,39 @@ interval = 3.0
 format-connected = <ramp-signal>
 format-connected-padding = 1
 label-connected = %essid%
-
 ramp-signal-0 = 
+
 
 [module/eth]
 type = internal/network
 interface = enp60s0
 interval = 3.0
-
 format-connected-padding = 2
 label-connected = 
+
 
 [module/updates-arch-combined]
 type = custom/script
 exec = ~/.config/polybar/scripts/updates-arch-combined.sh
 interval = 600
-
 format-padding = 2
 
+
+; My custom todo.sh script for polybar
+; ------------------------------------
+; Displays the first "A" priority task from todo.sh
+;
 [module/todo]
 type = custom/script
 exec = ~/Scripts/todo/todo.sh -p lsp a | sed "s/[\+@].*$//g"
 interval = 30
-
 format-padding = 1
+
 
 [module/date]
 type = internal/date
 interval = 5
-
 date-alt = " %Y-%m-%d"
-
 time = %l:%M %p
 time-alt = %H:%M:%S
 
@@ -168,8 +151,8 @@ format-prefix = 
 format-padding = 2
 format-background = ${colors.secondary}
 format-foreground = ${colors.contrast}
-
 label = %date% %time%
+
 
 [module/openweathermap-fullfeatured]
 type = custom/script
@@ -400,7 +383,7 @@ thermal-zone = 0
 ; to find path to desired file
 ; Default reverts to thermal zone setting
 ;hwmon-path = /sys/devices/virtual/thermal/thermal_zone0/hwmon0/temp1_input
-hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon2/temp2_input
+hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon1/temp2_input
 
 ; Base temperature for where to start the ramp (in degrees celsius)
 ; Default: 0

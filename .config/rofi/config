@@ -1,0 +1,11 @@
+rofi.combi-modi:    window,drun,run,ssh
+rofi.font:          Source Code Pro Semibold 10
+rofi.matching:      glob
+rofi.modi:          combi
+rofi.terminal:      st
+rofi.theme:         ~/.cache/wal/colors-rofi-dark.rasi
+rofi.padding:       800
+rofi.bw:            0
+rofi.eh:            2
+rofi.hide-scrollbar: true
+rofi.psuedo-transparency: true

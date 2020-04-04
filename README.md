@@ -1,11 +1,6 @@
 # dotfiles
 My dotfiles for my Arch Linux Setup
 
-## Using my dotfiles for your setup
-
-You will have to make some manual changes to my dotfiles for your setup so that
-everything will work properly.
-
 ## Dependencies
 ### Download the Official Packages First
 ####  Using pacman (Arch Linux)
@@ -25,8 +20,9 @@ These can be downloaded from the Arch User Respositories (AUR) in Arch Linux, or
 - pywal
 - youtube-viewer
 
-## Manual Config File Changes
-### todo.sh
+## todo.sh
+
+You will need to make some manual changes if you want to use my todo.sh setup.
 
 In your todo.cfg file in located in ``` ~/Scripts/todo/todo.cfg ``` change ``` export TODO_DIR="/home/cody/Sync/Todo" ```
 to whatever directory you will be using for your todo.txt files.

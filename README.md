@@ -1,6 +1,8 @@
 # dotfiles
 My dotfiles for my Arch Linux Setup
 
+<img src="https://raw.githubusercontent.com/codysork/dotfiles/master/Pictures/Screenshots/screenshot1.png" />
+
 ## Dependencies
 ### Download the Official Packages First
 ####  Using pacman (Arch Linux)

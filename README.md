@@ -21,7 +21,9 @@ These can be downloaded from the Arch User Respositories (AUR) in Arch Linux, or
 
 #### Using yay
 
+```
 yay -S castero python-pywal youtube-viewer
+```
 
 ### st installation
 

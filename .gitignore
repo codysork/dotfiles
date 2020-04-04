@@ -1,5 +1,4 @@
 # Exclude all hidden files and directories by default
-.*
 */
 Sync/*
 

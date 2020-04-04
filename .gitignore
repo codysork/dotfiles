@@ -1,5 +1,13 @@
+# Exclude all hidden files and directories by default
 .*
 */
-.conky/*
 Sync/*
 
+# Include config files 
+!.config/
+
+# Include some dotfiles
+!.p10k.zsh
+!.xinitrc
+!.vimrc
+!.zshrc

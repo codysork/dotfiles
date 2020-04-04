@@ -221,7 +221,6 @@ bindsym $mod+Ctrl+k exec keepassxc
 bindsym $mod+Ctrl+m exec st -e cmus
 bindsym $mod+Ctrl+p exec st -e castero
 bindsym $mod+Ctrl+r exec st -e ranger ~/@/
-bindsym $mod+Ctrl+t exec st -e rainbowstream
 bindsym $mod+Ctrl+u exec st -e yay -Syu
 bindsym $mod+Ctrl+v exec st -e vim ~/@/@Inbox/new.temp
 bindsym $mod+Ctrl+w exec wal -si ~/Pictures/Wallpapers --iterative -o ~/Scripts/keycolors

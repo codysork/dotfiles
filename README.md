@@ -11,8 +11,5 @@ everything will work properly.
 In your todo.cfg file in located in:
 ``` ~/Scripts/todo/todo.cfg ```
 
-change
-
-``` export TODO_DIR="/home/cody/Sync/Todo" ```
-
-to where you will be keeping your todo.txt file.
+change ``` export TODO_DIR="/home/cody/Sync/Todo" ```
+to whatver path you will be using for your todo.txt file.

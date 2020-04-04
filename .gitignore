@@ -1,6 +1,6 @@
 # Exclude all hidden files and directories by default
 */
-Sync/*
+.*
 
 # Include some config files 
 !.config/i3/config

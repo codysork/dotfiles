@@ -4,7 +4,7 @@ My dotfiles for my Arch Linux setup
 <img src="https://raw.githubusercontent.com/codysork/dotfiles/master/Pictures/Screenshots/screenshot1.png" />
 
 ## Installation and setup
-### Download the official Packages first
+### Download the official packages first
 
 Using pacman: 
 ```

@@ -27,3 +27,7 @@ You will need to make some manual changes if you want to use my todo.sh setup.
 
 In your todo.cfg file in located in ``` ~/Scripts/todo/todo.cfg ``` change ``` export TODO_DIR="/home/cody/Sync/Todo" ```
 to whatever directory you will be using for your todo.txt files.
+
+## Hotkeys
+
+Super-Ctrl-w: Change your wallpaper (and keyboard LEDs if using my msi-xresources script)

@@ -27,4 +27,4 @@ to whatever directory you will be using for your todo.txt files.
 
 ## Hotkeys
 
-- Super+Ctrl+w: Change your wallpaper (and keyboard LEDs if using my msi-xresources script)
+- Super+Ctrl+w: Change your wallpaper (and keyboard LEDs if using my [msi-xresources script](https://github.com/codysork/msi-xresources))

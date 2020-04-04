@@ -11,7 +11,7 @@ My dotfiles for my Arch Linux setup
 
 Using pacman: 
 ```
-sudo pacman -S calcurse cmus compton firefox i3-gaps keepassxc ranger redshift rofi vim zsh
+sudo pacman -S calcurse cmus compton firefox i3-gaps keepassxc mpv ranger redshift rofi vim zsh
 ```
 
 ### Install the secondary packages
@@ -49,12 +49,14 @@ to whatever directory you will be using for your todo.txt files.
 ## Custom Hotkeys
 - ` Ctrl ` + ` Super ` + ` Esc `: put your computer in hibernation (see: [Arch Wiki: Power Management#Hibernation](https://wiki.archlinux.org/index.php/Power_management/Suspend_and_hibernate#Hibernation))
 - ` Ctrl ` + ` Super ` + ` c `: open calcurse
-- ` Ctrl ` + ` Super ` + ` e `: open vim
-- ` Ctrl ` + ` Super ` + ` f `: open firefox
+- ` Ctrl ` + ` Super ` + ` e `: open Vim
+- ` Ctrl ` + ` Super ` + ` f `: open Firefox
 - ` Ctrl ` + ` Super ` + ` k `: open KeepassXC
 - ` Ctrl ` + ` Super ` + ` m `: open cmus
 - ` Ctrl ` + ` Super ` + ` p `: open castero
 - ` Ctrl ` + ` Super ` + ` w `: change your wallpaper (and keyboard LEDs if using my [msi-xresources script](https://github.com/codysork/msi-xresources)).
+- ` Ctrl ` + ` Super ` + ` y `: open youbtube-viewer video search (videos open in mpv)
+- ` Ctrl ` + ` Super ` + ` z `: open youbtube-viewer channel search (videos open in mpv)
 
   Unless you have an MSI laptop like I do, you will want delete 
   `-o ~/Scripts/keycolors ` from this line in ` ~/.config/i3/config `:

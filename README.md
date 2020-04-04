@@ -1,5 +1,5 @@
 # dotfiles
-My dotfiles for my Arch Linux Setup
+My dotfiles for my Arch Linux setup
 
 <img src="https://raw.githubusercontent.com/codysork/dotfiles/master/Pictures/Screenshots/screenshot1.png" />
 

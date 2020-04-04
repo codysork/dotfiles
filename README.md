@@ -55,8 +55,8 @@ to whatever directory you will be using for your todo.txt files.
 - ` Ctrl ` + ` Super ` + ` m `: open cmus
 - ` Ctrl ` + ` Super ` + ` p `: open castero
 - ` Ctrl ` + ` Super ` + ` w `: change your wallpaper (and keyboard LEDs if using my [msi-xresources script](https://github.com/codysork/msi-xresources)).
-- ` Ctrl ` + ` Super ` + ` y `: open youbtube-viewer video search (videos open in mpv)
-- ` Ctrl ` + ` Super ` + ` z `: open youbtube-viewer channel search (videos open in mpv)
+- ` Ctrl ` + ` Super ` + ` y `: open youtube-viewer video search (videos open in mpv)
+- ` Ctrl ` + ` Super ` + ` z `: open youtube-viewer channel search (videos open in mpv)
 
   Unless you have an MSI laptop like I do, you will want delete 
   `-o ~/Scripts/keycolors ` from this line in ` ~/.config/i3/config `:

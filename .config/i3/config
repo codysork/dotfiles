@@ -258,6 +258,7 @@ exec compton
 exec wal -si ~/Pictures/Wallpapers
 exec_always --no-startup-id ~/.config/polybar/scripts/launch.sh &
 exec redshift
+exec sudo mount /dev/sda ~/External # auto mount my external hard drive
 
 # Peripheral Settings
 #exec xinput | awk '/Touch/ {print $6}' | sed 's/id=//g' | xargs -I {} xinput set-prop {} "Device Enabled" 0

@@ -1,5 +1,5 @@
 # Excluded Defaults
-[A-Z]/ 
+[@A-Z]*/ 
 .[GXa-bd-o-su-z]*
 .ca*
 .par*

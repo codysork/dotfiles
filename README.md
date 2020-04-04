@@ -15,7 +15,6 @@ These can be downloaded from the Arch User Respositories (AUR) in Arch Linux, or
 
 - castero
 - keepassxc
-- rainbowstream
 - todo.sh
 - pywal
 - youtube-viewer

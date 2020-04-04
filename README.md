@@ -6,7 +6,10 @@ My dotfiles for my Arch Linux setup
 ## Installation and setup
 ### Download the official Packages first
 
-Using pacman: `pacman -S calcurse cmus compton firefox i3-gaps ranger redshift rofi vim zsh`
+Using pacman: 
+```
+pacman -S calcurse cmus compton firefox i3-gaps ranger redshift rofi vim zsh
+```
 
 ### Install the secondary packages
 
@@ -30,12 +33,20 @@ sudo make install
 
 You will need to make some manual changes if you want to use my todo.sh setup.
 
-In your todo.cfg file in located in `~/Scripts/todo/todo.cfg` change `export TODO_DIR="/home/cody/Sync/Todo" `
+In your todo.cfg file in located in `~/Scripts/todo/todo.cfg` change 
+```
+export TODO_DIR="/home/cody/Sync/Todo"
+```
 to whatever directory you will be using for your todo.txt files.
 
 ## Custom Hotkeys
 
 - Super+Ctrl+w: Change your wallpaper (and keyboard LEDs if using my [msi-xresources script](https://github.com/codysork/msi-xresources))
   Unless you have an MSI laptop like I do, you will want to change this line in ~/.config/i3/config:
-  `bindsym $mod+Ctrl+w exec wal -si ~/Pictures/Wallpapers --iterative -o ~/Scripts/keycolors ` to
-  ` bindsym $mod+Ctrl+w exec wal -si ~/Pictures/Wallpapers --iterative -o`
+  ```
+  bindsym $mod+Ctrl+w exec wal -si ~/Pictures/Wallpapers --iterative -o ~/Scripts/keycolors 
+  ```
+  to
+  ``` 
+  bindsym $mod+Ctrl+w exec wal -si ~/Pictures/Wallpapers --iterative -o
+  ```

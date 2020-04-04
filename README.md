@@ -8,7 +8,7 @@ My dotfiles for my Arch Linux setup
 
 Using pacman: 
 ```
-pacman -S calcurse cmus compton firefox i3-gaps keepassxc ranger redshift rofi vim zsh
+sudo pacman -S calcurse cmus compton firefox i3-gaps keepassxc ranger redshift rofi vim zsh
 ```
 
 ### Install the secondary packages

@@ -9,4 +9,4 @@ everything will work properly.
 ### todo.sh
 
 In your todo.cfg file in located in ``` ~/Scripts/todo/todo.cfg ``` change ``` export TODO_DIR="/home/cody/Sync/Todo" ```
-to whatever path you will be using for your todo.txt file.
+to whatever directory you will be using for your todo.txt files.

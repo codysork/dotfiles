@@ -1,7 +1,10 @@
 # dotfiles
 My dotfiles for my Arch Linux setup
 
+## Screenshots
+
 <img src="https://raw.githubusercontent.com/codysork/dotfiles/master/Pictures/Screenshots/screenshot1.png" />
+<img src="https://raw.githubusercontent.com/codysork/dotfiles/master/Pictures/Screenshots/screenshot2.png" />
 
 ## Installation and setup
 ### Download the official packages first

@@ -20,11 +20,12 @@ Pictures/*
 Sync/
 
 # Excluded config files
-.config/[A-Va-hj-qt-z]*
+.config/[A-Va-hj-qt-xz]*
 .config/in*
 .config/s[c-pt-y]*
 .config/i3/*
 .config/rofi/*
+.config/youtube-viewer/api.json
 
 # Include some config files 
 !.config/i3/config
@@ -32,6 +33,7 @@ Sync/
 !.config/redshift/*
 !.config/rofi/config
 !.config/st/*
+!.config/youtube-viewer/youtube-viewer.conf
 
 # Included todo.sh extensions
 !.todo.actions.d/*

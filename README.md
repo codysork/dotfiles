@@ -8,7 +8,7 @@ My dotfiles for my Arch Linux setup
 
 Using pacman: 
 ```
-pacman -S calcurse cmus compton firefox i3-gaps ranger redshift rofi vim zsh
+pacman -S calcurse cmus compton firefox i3-gaps keepassxc ranger redshift rofi vim zsh
 ```
 
 ### Install the secondary packages
@@ -16,10 +16,12 @@ pacman -S calcurse cmus compton firefox i3-gaps ranger redshift rofi vim zsh
 These can be downloaded from the Arch User Respositories (AUR) in Arch Linux, or you can download them from their git repositories.
 
 - castero
-- keepassxc
-- todo.sh
 - pywal
 - youtube-viewer
+
+#### Using yay
+
+yay -S castero python-pywal youtube-viewer
 
 ### st installation
 

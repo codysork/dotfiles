@@ -47,7 +47,7 @@ export TODO_DIR="/home/cody/Sync/Todo"
 to whatever directory you will be using for your todo.txt files.
 
 ## Custom Hotkeys
-- Ctrl+Super+c: open calcurse
+- ` Ctrl `+ `Super `+ ` c `: open calcurse
 - Ctrl+Super+e: open vim
 - Ctrol+Super+f: open firefox
 - Ctrl+Super+Esc: put your computer in hibernation (see: [Arch Wiki: Power Management#Hibernation](https://wiki.archlinux.org/index.php/Power_management/Suspend_and_hibernate#Hibernation))

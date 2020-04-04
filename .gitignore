@@ -1,5 +1,5 @@
 # Excluded Defaults
-[@A-Z]*/ 
+[@A-OQ-RT-Z]*
 .[GXa-bd-o-su-z]*
 .ca*
 .par*
@@ -13,6 +13,7 @@
 .PyCharm*/
 .vim/*
 .viminfo
+Pictures/*
 *.tmp
 
 # Excluded config files
@@ -37,3 +38,7 @@
 !.xinitrc
 !.vimrc
 !.zshrc
+
+# Include Screenshots and Wallpapers
+!Pictures/Screenshots/*
+!Pictures/Wallpapers/*

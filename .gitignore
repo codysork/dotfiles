@@ -1,5 +1,4 @@
 # Excluded Defaults
-[@A-OQ-RT-Z]*
 .[GXa-bd-o-su-z]*
 .ca*
 .par*
@@ -13,8 +12,12 @@
 .PyCharm*/
 .vim/*
 .viminfo
-Pictures/*
 *.tmp
+
+# Exclude Home Directories
+[@A-OQ-RT-Z]*
+Pictures/*
+Sync/
 
 # Excluded config files
 .config/[A-Va-hj-qt-z]*

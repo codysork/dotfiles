@@ -1,17 +1,36 @@
-# Exclude all hidden files and directories by default
-*/
-.*
+# Excluded Defaults
+[A-Z]/ 
+.[GXa-bd-o-su-z]*
+.ca*
+.par*
+.p[k-y]*
+.rain*
+.tooling
+.conda
+.conky
+.cortex
+.Password*
+.PyCharm*/
+.vim/*
+.viminfo
+*.tmp
+
+# Excluded config files
+.config/[A-Va-hj-qt-z]*
+.config/in*
+.config/s[c-pt-y]*
+.config/i3/*
+.config/rofi/*
 
 # Include some config files 
 !.config/i3/config
-!.config/polybar/*
 !.config/ranger/*
 !.config/redshift/*
 !.config/rofi/config
 !.config/st/*
-!.config/wal/*
-!.config/youtube-viewer/*
-!.config/zathura/*
+
+# Included todo.sh extensions
+!.todo.actions.d/*
 
 # Include some dotfiles
 !.p10k.zsh

@@ -1,0 +1,10 @@
+#!/bin/bash
+#
+# Shows next actions in each project listed in your projects.txt file
+
+for PROJECT in $(sh $TODO_FULL_SH listproj)
+do
+   echo "$PROJECT:"
+   sh $TODO_FULL_SH ls $PROJECT
+   echo
+done

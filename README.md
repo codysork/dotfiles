@@ -47,11 +47,14 @@ export TODO_DIR="/home/cody/Sync/Todo"
 to whatever directory you will be using for your todo.txt files.
 
 ## Custom Hotkeys
-- ` Ctrl `+ `Super `+ ` c `: open calcurse
-- Ctrl+Super+e: open vim
-- Ctrol+Super+f: open firefox
-- Ctrl+Super+Esc: put your computer in hibernation (see: [Arch Wiki: Power Management#Hibernation](https://wiki.archlinux.org/index.php/Power_management/Suspend_and_hibernate#Hibernation))
-- Ctrl+Super+w: change your wallpaper (and keyboard LEDs if using my [msi-xresources script](https://github.com/codysork/msi-xresources)).
+- ` Ctrl ` + ` Super ` + ` Esc `: put your computer in hibernation (see: [Arch Wiki: Power Management#Hibernation](https://wiki.archlinux.org/index.php/Power_management/Suspend_and_hibernate#Hibernation))
+- ` Ctrl ` + ` Super ` + ` c `: open calcurse
+- ` Ctrl ` + ` Super ` + ` e `: open vim
+- ` Ctrl ` + ` Super ` + ` f `: open firefox
+- ` Ctrl ` + ` Super ` + ` k `: open KeepassXC
+- ` Ctrl ` + ` Super ` + ` m `: open castero
+- ` Ctrl ` + ` Super ` + ` p `: open cmus
+- ` Ctrl ` + ` Super ` + ` w `: change your wallpaper (and keyboard LEDs if using my [msi-xresources script](https://github.com/codysork/msi-xresources)).
 
   Unless you have an MSI laptop like I do, you will want delete 
   `-o ~/Scripts/keycolors ` from this line in ` ~/.config/i3/config `:

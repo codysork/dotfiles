@@ -3,8 +3,16 @@
 */
 Sync/*
 
-# Include config files 
-!.config/
+# Include some config files 
+!.config/i3/config
+!.config/polybar/*
+!.config/ranger/*
+!.config/redshift/*
+!.config/rofi/config
+!.config/st/*
+!.config/wal/*
+!.config/youtube-viewer/*
+!.config/zathura/*
 
 # Include some dotfiles
 !.p10k.zsh

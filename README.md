@@ -44,7 +44,7 @@ to whatever directory you will be using for your todo.txt files.
 - Super+Ctrl+w: Change your wallpaper (and keyboard LEDs if using my [msi-xresources script](https://github.com/codysork/msi-xresources)).
 
   Unless you have an MSI laptop like I do, you will want delete 
-  ` ~/Scripts/keycolors ` from this line in ` ~/.config/i3/config `:
+  `-o ~/Scripts/keycolors ` from this line in ` ~/.config/i3/config `:
   ```
   bindsym $mod+Ctrl+w exec wal -si ~/Pictures/Wallpapers --iterative -o ~/Scripts/keycolors 
   ```

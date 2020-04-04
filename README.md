@@ -22,7 +22,8 @@ These can be downloaded from the Arch User Respositories (AUR) in Arch Linux, or
 
 My dotfiles include [Luke Smith's fork of st](https://github.com/lukesmithxyz/st/tree/131bdf67fda75365e289a2d76ab5c7b242d7fde2). To install st:
 ``` cd .config/st/
-    sudo make install ```
+    sudo make install 
+```
 
 ### todo.sh setup
 

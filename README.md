@@ -5,11 +5,8 @@ My dotfiles for my Arch Linux Setup
 
 ## Dependencies
 ### Download the Official Packages First
-####  Using pacman (Arch Linux)
 
-``` pacman -S calcurse cmus compton firefox i3-gaps ranger redshift rofi vim zsh```
-
-#### Using apt-get (Ubuntu, Debian)
+Using pacman: ``` pacman -S calcurse cmus compton firefox i3-gaps ranger redshift rofi vim zsh```
 
 ### Install the Secondary, Unofficial Packages
 

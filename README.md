@@ -47,7 +47,7 @@ export TODO_DIR="/home/cody/Sync/Todo"
 to whatever directory you will be using for your todo.txt files.
 
 ## Custom Hotkeys
-
+- Ctrl+Super+Esc: Put your computer in hibernation (see: [Arch Wiki: Power Management#Hibernation](https://wiki.archlinux.org/index.php/Power_management/Suspend_and_hibernate#Hibernation))
 - Super+Ctrl+w: Change your wallpaper (and keyboard LEDs if using my [msi-xresources script](https://github.com/codysork/msi-xresources)).
 
   Unless you have an MSI laptop like I do, you will want delete 

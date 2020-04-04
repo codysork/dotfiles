@@ -52,8 +52,8 @@ to whatever directory you will be using for your todo.txt files.
 - ` Ctrl ` + ` Super ` + ` e `: open vim
 - ` Ctrl ` + ` Super ` + ` f `: open firefox
 - ` Ctrl ` + ` Super ` + ` k `: open KeepassXC
-- ` Ctrl ` + ` Super ` + ` m `: open castero
-- ` Ctrl ` + ` Super ` + ` p `: open cmus
+- ` Ctrl ` + ` Super ` + ` m `: open cmus
+- ` Ctrl ` + ` Super ` + ` p `: open castero
 - ` Ctrl ` + ` Super ` + ` w `: change your wallpaper (and keyboard LEDs if using my [msi-xresources script](https://github.com/codysork/msi-xresources)).
 
   Unless you have an MSI laptop like I do, you will want delete 

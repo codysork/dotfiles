@@ -4,4 +4,6 @@ pkill polybar
 
 sleep 1;
 
-polybar --reload base -c ~/.config/polybar/config &
+polybar --reload time -c ~/.config/polybar/config &
+polybar --reload wm -c ~/.config/polybar/config &
+polybar --reload controls -c ~/.config/polybar/config &

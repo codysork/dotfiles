@@ -31,10 +31,13 @@ Scripts/__pycache__/*
 
 # Include some config files 
 !.config/
+!.config/compton.conf
 !.config/i3/
 !.config/i3/config
 !.config/polybar/
 !.config/polybar/config
+!.config/polybar/scripts/
+!.config/polybar/scripts/*
 !.config/ranger/
 !.config/redshift/
 !.config/rofi/config

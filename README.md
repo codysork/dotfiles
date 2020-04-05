@@ -7,7 +7,7 @@ My dotfiles for my Arch Linux setup
 <img src="https://raw.githubusercontent.com/codysork/dotfiles/master/Pictures/Screenshots/screenshot2.png" />
 
 ## Installation and setup
-### Download the official packages first
+### Install the official packages
 
 Using pacman: 
 ```
@@ -36,17 +36,31 @@ cd ~/.config/st/
 sudo make install 
 ```
 
-### todo.sh setup
+### todo.txt setup
 
-You will need to make some manual changes if you want to use my todo.sh setup.
+You will need to make some manual changes if you want to use my todo.txt setup.
 
-In your todo.cfg file in located in `~/Scripts/todo/todo.cfg` change 
+In your todo.cfg file located in `~/Scripts/todo/todo.cfg` change 
 ```
 export TODO_DIR="/home/cody/Sync/Todo"
 ```
 to whatever directory you will be using for your todo.txt files.
 
-## Custom Hotkeys
+## Hotkeys
+### Rebound i3 hotkeys
+#### Vim window focus bindings
+
+- ` Super ` + ` h `: Move focused window left
+- ` Super ` + ` j `: Move focused window down
+- ` Super ` + ` k `: Move focused window up
+- ` Super ` + ` h `: Move focused window right
+
+#### Horizontal/Vertical splits
+
+- ` Super ` + ` i `: Split window vertically
+- ` Super ` + ` o `: Split window horizontally
+
+### Custom hotkeys
 - ` Ctrl ` + ` Super ` + ` Esc `: put your computer in hibernation (see: [Arch Wiki: Power Management#Hibernation](https://wiki.archlinux.org/index.php/Power_management/Suspend_and_hibernate#Hibernation))
 - ` Ctrl ` + ` Super ` + ` c `: open calcurse
 - ` Ctrl ` + ` Super ` + ` e `: open Vim

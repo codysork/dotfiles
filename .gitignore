@@ -1,9 +1,4 @@
 # Excluded Defaults
-.[GXa-bd-o-su-z]*
-.ca*
-.par*
-.p[k-y]*
-.rain*
 .tooling
 .conda
 .conky
@@ -15,8 +10,6 @@
 *.tmp
 
 # Exclude Home Directories
-[@A-OQ-RT-Z]*
-Pictures/*
 Sync/
 
 # Excluded config files

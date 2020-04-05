@@ -13,13 +13,13 @@ set_from_resource $accent i3wm.color5 #f0f0f0
 
 # Window Style
 hide_edge_borders smart
-default_border pixel 1
-default_floating_border pixel 1
-new_window pixel 1
-new_float pixel 1
+default_border pixel 2
+default_floating_border pixel 2
+new_window pixel 2
+new_float pixel 2
 
 bindsym $mod+u border none
-bindsym $mod+y border pixel 1
+bindsym $mod+y border pixel 2
 bindsym $mod+n border normal
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -199,8 +199,8 @@ bindsym $mod+r mode "resize"
 
 # class                 border  backgr. text indicator child_border
 client.focused          $accent $bg     $fg  $accent   $accent 
-client.focused_inactive $main   $bg   $fg  $main       $main
-client.unfocused        $main   $bg     $fg  $main     $main
+client.focused_inactive $bg     $bg     $fg  $bg       $bg
+client.unfocused        $bg     $bg     $fg  $bg       $bg
 client.urgent           $bg     $bg     $fg  $bg       $bg
 client.placeholder      $bg     $bg     $fg  $bg       $bg
 
@@ -208,7 +208,7 @@ client.background       $bg
 
 # Gaps
 gaps inner 30
-smart_borders no_gaps
+smart_gaps on
 
 # My Custom Hotkeys
 # -----------------
@@ -219,7 +219,7 @@ bindsym $mod+Ctrl+f exec firefox
 bindsym $mod+Ctrl+k exec keepassxc
 bindsym $mod+Ctrl+m exec st -e cmus
 bindsym $mod+Ctrl+p exec st -e castero
-bindsym $mod+Ctrl+r exec st -e ranger ~/@/
+bindsym $mod+Ctrl+r exec st -e ranger ~/
 bindsym $mod+Ctrl+u exec st -e yay -Syu
 bindsym $mod+Ctrl+v exec st -e vim ~/@/@Inbox/new.temp
 bindsym $mod+Ctrl+w exec wal -si ~/Pictures/Wallpapers --iterative -o ~/Scripts/keycolors

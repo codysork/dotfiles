@@ -1,7 +1,5 @@
 # dotfiles
-My dotfiles for my Arch Linux setup
-
-## Screenshots
+My dotfiles for my Arch Linux setup. It makes your desktop look beautiful, and has lots of useful custom hotkeys.
 
 <img src="https://raw.githubusercontent.com/codysork/dotfiles/master/Pictures/Screenshots/screenshot1.png" />
 

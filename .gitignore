@@ -27,6 +27,9 @@ Sync/
 .config/rofi/*
 .config/youtube-viewer/api.json
 
+# Excluded scripts
+Scripts/__pycache__/*
+
 # Include some config files 
 !.config/i3/config
 !.config/ranger/*

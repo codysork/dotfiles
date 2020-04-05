@@ -76,9 +76,8 @@ to whatever directory you will be using for your todo.txt files.
 - ` Ctrl ` + ` Super ` + ` y `: open youtube-viewer video search (videos open in mpv)
 - ` Ctrl ` + ` Super ` + ` z `: open youtube-viewer channel search (videos open in mpv)
 
-  Unless you have an MSI laptop like I do, you will want delete 
-  `-o ~/Scripts/keycolors ` from this line in ` ~/.config/i3/config `:
+  Unless you have an MSI laptop like I do, you will want delete or comment out this line from ` ~/.local/bin/wal-scripts `:
   ```
-  bindsym $mod+Ctrl+w exec wal -si ~/Pictures/Wallpapers --iterative -o ~/Scripts/keycolors 
+  sh keycolors 
   ```
   

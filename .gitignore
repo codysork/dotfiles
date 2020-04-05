@@ -11,6 +11,11 @@
 .config/spicetify/Backup/*
 .config/youtube-viewer/api.json
 
+# Exclude most firefox files and directories
+.mozilla/*
+.mozilla/firefox/*
+.mozilla/firefox/033x0mac*/*
+
 # Excluded scripts
 Scripts/__pycache__/*
 
@@ -41,6 +46,13 @@ Scripts/__pycache__/*
 !.config/spicetify/Themes/wal/*
 !.config/st/
 !.config/youtube-viewer/youtube-viewer.conf
+
+# Include custom firefox css
+!.mozilla/
+!.mozilla/firefox/
+!.mozilla/firefox/033x0mac*/
+!.mozilla/firefox/033x0mac*/chrome/
+!.mozilla/firefox/033x0mac*/chrome/*
 
 # Included todo.sh extensions
 !.todo.actions.d/

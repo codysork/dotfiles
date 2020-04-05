@@ -8,7 +8,7 @@ My dotfiles for my Arch Linux setup. It makes your desktop look beautiful, and h
 
 Using pacman: 
 ```
-sudo pacman -S calcurse cmus compton firefox i3-gaps keepassxc mpv ranger redshift rofi vim zsh
+sudo pacman -S calcurse cmus firefox keepassxc mpv ranger redshift rofi vim zsh
 ```
 
 ### Install the secondary packages
@@ -16,13 +16,15 @@ sudo pacman -S calcurse cmus compton firefox i3-gaps keepassxc mpv ranger redshi
 These can be downloaded from the Arch User Respositories, or you can download them from their git repositories.
 
 - castero
+- compton-tryone-git
+- i3-gaps-rounded-git
 - pywal
 - youtube-viewer
 
 #### Using yay
 
 ```
-yay -S castero python-pywal youtube-viewer
+yay -S castero compton-tryone-git i3-gaps-rounded-git python-pywal youtube-viewer
 ```
 
 ### st installation

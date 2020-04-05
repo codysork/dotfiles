@@ -13,6 +13,9 @@
 # Excluded scripts
 Scripts/__pycache__/*
 
+# Other excluded
+./local/*
+
 # Include some dotfiles in home directory
 !.gitconfig
 !.p10k.zsh
@@ -29,6 +32,12 @@ Scripts/__pycache__/*
 !.config/ranger/
 !.config/redshift/
 !.config/rofi/config
+!.config/spicetify/
+!.config/spicetify/*
+!.config/spicetify/config.ini
+!.config/spicetify/Themes/
+!.config/spicetify/Themes/wal
+!.config/spicetify/Themes/wal/*
 !.config/st/
 !.config/youtube-viewer/youtube-viewer.conf
 
@@ -36,6 +45,9 @@ Scripts/__pycache__/*
 !.todo.actions.d/
 
 # Include scripts
+!.local/
+!.local/bin/
+!.local/bin/*
 !Scripts/
 !Scripts/todo/
 !Scripts/keycolors

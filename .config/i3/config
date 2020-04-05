@@ -222,7 +222,7 @@ bindsym $mod+Ctrl+p exec st -e castero
 bindsym $mod+Ctrl+r exec st -e ranger ~/
 bindsym $mod+Ctrl+u exec st -e yay -Syu
 bindsym $mod+Ctrl+v exec st -e vim ~/@/@Inbox/new.temp
-bindsym $mod+Ctrl+w exec wal -si ~/Pictures/Wallpapers --iterative -o ~/Scripts/keycolors
+bindsym $mod+Ctrl+w exec wal -si ~/Pictures/Wallpapers --iterative -o ~/.local/bin/wal-scripts
 bindsym $mod+Ctrl+y exec st -e youtube-viewer -C --player=mpv --invidious
 bindsym $mod+Ctrl+z exec st -e youtube-viewer -C --player=mpv --channels --invidious
 #bindsym $mod+Ctrl+minus exec xinput set-prop 18 "Device Enabled" 0

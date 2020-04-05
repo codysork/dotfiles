@@ -16,7 +16,7 @@ sudo pacman -S calcurse cmus compton firefox i3-gaps keepassxc mpv ranger redshi
 
 ### Install the secondary packages
 
-These can be downloaded from the Arch User Respositories (AUR) in Arch Linux, or you can download them from their git repositories.
+These can be downloaded from the Arch User Respositories, or you can download them from their git repositories.
 
 - castero
 - pywal

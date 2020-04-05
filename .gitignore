@@ -1,45 +1,46 @@
-# Excluded Defaults
-.tooling
-.conda
-.conky
-.cortex
-.Password*
-.PyCharm*/
-.vim/*
-.viminfo
-*.tmp
-
-# Exclude Home Directories
-Sync/
+# Exclude all dotfiles on home directory by default
+.* 
+# Exclude all home directories by default
+*/ 
 
 # Excluded config files
-.config/[A-Va-hj-qt-xz]*
-.config/in*
-.config/s[c-pt-y]*
+.config/*
 .config/i3/*
+.config/polybar/*
 .config/rofi/*
 .config/youtube-viewer/api.json
 
 # Excluded scripts
 Scripts/__pycache__/*
 
-# Include some config files 
-!.config/i3/config
-!.config/ranger/*
-!.config/redshift/*
-!.config/rofi/config
-!.config/st/*
-!.config/youtube-viewer/youtube-viewer.conf
-
-# Included todo.sh extensions
-!.todo.actions.d/*
-
-# Include some dotfiles
+# Include some dotfiles in home directory
+!.gitconfig
 !.p10k.zsh
 !.xinitrc
 !.vimrc
 !.zshrc
 
-# Include Screenshots and Wallpapers
-!Pictures/Screenshots/*
-!Pictures/Wallpapers/*
+# Include some config files 
+!.config/
+!.config/i3/
+!.config/i3/config
+!.config/polybar/
+!.config/polybar/config
+!.config/ranger/
+!.config/redshift/
+!.config/rofi/config
+!.config/st/
+!.config/youtube-viewer/youtube-viewer.conf
+
+# Included todo.sh extensions
+!.todo.actions.d/
+
+# Include scripts
+!Scripts/
+!Scripts/todo/
+!Scripts/keycolors
+
+# Include screenshots and wallpapers
+!Pictures/
+!Pictures/Screenshots/
+!Pictures/Wallpapers/

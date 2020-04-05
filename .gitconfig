@@ -1,0 +1,13 @@
+[user]
+	name = Cody Sork
+	email = codysork@tutanota.com
+[branch]
+	autosteuprebase = always
+[color]
+	ui = true
+	status = auto
+	branch = auto
+[core]
+	editor = vim
+[merge]
+	tool = vimdiff

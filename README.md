@@ -4,7 +4,6 @@ My dotfiles for my Arch Linux setup
 ## Screenshots
 
 <img src="https://raw.githubusercontent.com/codysork/dotfiles/master/Pictures/Screenshots/screenshot1.png" />
-<img src="https://raw.githubusercontent.com/codysork/dotfiles/master/Pictures/Screenshots/screenshot3.png" />
 
 ## Installation and setup
 ### Install the official packages

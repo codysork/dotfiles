@@ -43,4 +43,6 @@ Scripts/__pycache__/*
 # Include screenshots and wallpapers
 !Pictures/
 !Pictures/Screenshots/
+!Pictures/Screenshots/*
 !Pictures/Wallpapers/
+!Pictures/Wallpapers/*

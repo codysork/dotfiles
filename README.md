@@ -48,12 +48,19 @@ to whatever directory you will be using for your todo.txt files.
 
 ## Hotkeys
 ### Rebound i3 hotkeys
-#### Vim window focus bindings
+#### Change focus
 
-- ` Super ` + ` h `: Move focused window left
-- ` Super ` + ` j `: Move focused window down
-- ` Super ` + ` k `: Move focused window up
-- ` Super ` + ` h `: Move focused window right
+- ` Super ` + ` h `: Change focus to left window
+- ` Super ` + ` j `: Change focus to right window
+- ` Super ` + ` k `: Change focus to lower window
+- ` Super ` + ` h `: Change focus to upper window
+
+#### Move windows
+
+- ` Super ` + ` Shift ` + ` h `: Move focused window left
+- ` Super ` + ` Shift ` + ` j `: Move focused window down
+- ` Super ` + ` Shift ` + ` k `: Move focused window up
+- ` Super ` + ` Shift ` + ` h `: Move focused window right
 
 #### Horizontal/Vertical splits
 

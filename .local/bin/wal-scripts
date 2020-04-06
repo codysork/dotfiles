@@ -1,3 +1,4 @@
 #!/bin/bash
-sh keycolors
+wal -i ~/Pictures/Wallpapers --iterative
 spicetify update
+sh ~/.local/bin/keycolors

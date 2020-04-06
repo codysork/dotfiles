@@ -12,7 +12,7 @@
 # Supported models: ge6, ge73, ge75, gl63, gs63, gs65, gs75, gt63, gt75
 MSI_KEYBOARD_MODEL="gs65"
 # Supports any value from 0 to 15
-X_RESOURCES_COLOR_NUM=1
+X_RESOURCES_COLOR_NUM=5
 # End of Configuration
 
 

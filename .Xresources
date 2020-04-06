@@ -12,7 +12,7 @@
 ! rxvt
 URxvt*depth: 32
 URxvt*background: rgba:1111/1111/1111/dddd
-URxvt*font: xft:Sauce Code Pro Nerd Font Mono-11
+URxvt*font: xft:Sauce Code Pro Nerd Font Mono:pixelsize=14
 URxvt*transparent: true
 URxvt*shading: 20
 URxvt*scrollBar:  false

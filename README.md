@@ -8,7 +8,7 @@ My dotfiles for my Arch Linux setup. It makes your desktop look beautiful, and h
 
 Using pacman: 
 ```
-sudo pacman -S calcurse cmus firefox keepassxc mpv ranger redshift rofi vim zsh
+sudo pacman -S calcurse cmus firefox keepassxc mpv ranger redshift rofi rxvt-unicode vim zsh
 ```
 
 ### Install the secondary packages

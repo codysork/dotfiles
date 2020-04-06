@@ -13,7 +13,7 @@ set_from_resource $main i3wm.color1 #f0f0f0
 set_from_resource $accent i3wm.color5 #f0f0f0
 
 # Window Style
-hide_edge_borders smart
+#hide_edge_borders smart
 default_border pixel 2
 default_floating_border pixel 2
 new_window pixel 2

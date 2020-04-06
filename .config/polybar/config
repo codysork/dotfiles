@@ -68,10 +68,10 @@ foreground = ${colors.foreground}
 fixed-center = true
 override-redirect = true
 
-width = 23%:9
+width = 22%:10
 height = 30
-padding-left = 0
-padding-right = 4
+padding-left = 4
+padding-right = 0
 radius = 10
 offset-x = 18%:46
 offset-y = 10
@@ -85,7 +85,7 @@ font-2 = "Font Awesome 5 Brands:size=10;1"
 font-3 = "NotoEmoji Nerd Font:size=10;1"
 font-4 = "Noto Sans Symbols2:size=10;1"
 
-modules-center = i3
+modules-right = i3
 
 tray-position = none
 tray-detached = false
@@ -169,7 +169,7 @@ label-focused-foreground = ${colors.contrast}
 label-focused-padding = 2
 
 label-unfocused = %icon%
-label-unfocused-background = ${colors.background}
+label-unfocused-background = ${colors.main}
 label-unfocused-padding = 2
 
 label-visible = %index%
@@ -225,7 +225,7 @@ time-alt = %H:%M
 
 format-prefix = 
 format-padding = 2
-format-background = ${colors.background}
+format-background = ${colors.main}
 label = %date% %time%
 
 

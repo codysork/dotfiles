@@ -207,7 +207,7 @@ client.placeholder      $bg     $bg     $fg  $bg       $bg
 client.background       $bg
 
 # Gaps
-gaps inner 58
+gaps inner 50
 border_radius 10
 
 # My Custom Hotkeys

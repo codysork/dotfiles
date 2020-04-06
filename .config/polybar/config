@@ -33,7 +33,7 @@ padding-left = 0
 padding-right = 4
 radius = 10
 offset-x = 2%:20
-offset-y = 7
+offset-y = 5
 
 line-size = 0
 line-color = #f00
@@ -74,7 +74,7 @@ padding-left = 0
 padding-right = 4
 radius = 10
 offset-x = 42%:43
-offset-y = 7
+offset-y = 5
 
 line-size = 0
 line-color = #f00
@@ -115,7 +115,7 @@ padding-left = 5
 padding-right = 1
 radius = 10
 offset-x = 74%
-offset-y = 7
+offset-y = 5
 
 line-size = 0
 line-color = #f00

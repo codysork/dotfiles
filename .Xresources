@@ -9,6 +9,12 @@
 ! What degree of hinting to use (hintnone, hintslight, hintmedium, or hintfull)
 !Xft.hintstyle: hintslight
 
+! rxvt
+URxvt*depth: 32
+URxvt*background: rgba:1111/1111/1111/dddd
+Rxvt*font: xft:Source Code Pro-10
+
+URxvt*scrollBar:  false
 
 ! Colors
 

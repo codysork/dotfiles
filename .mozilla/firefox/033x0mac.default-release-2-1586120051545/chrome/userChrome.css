@@ -164,7 +164,7 @@ input#urlbar-input {
 .tabbrowser-tab {
 	background-color: #1e1f29 !important;
 	background-image: linear-gradient(to left, var(--color-tab-normal-start), var(--color-tab-normal-end)) !important;
-	border-radius: var(--tab-height) !important;
+	border-radius: 10px !important;
 	margin-inline-end: var(--gap-between-tabs) !important;
 	max-height: var(--tab-height) !important;
 	min-height: var(--tab-height) !important;

@@ -1,5 +1,6 @@
 # i3 config file (v1)
 set $mod Mod4
+set $term urxvt
 
 # Set colors from Xresources
 # Change 'color7' and 'color2' to whatever colors you want i3 to use
@@ -59,7 +60,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec st
+bindsym $mod+Return exec $term
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -213,38 +214,38 @@ border_radius 10
 # My Custom Hotkeys
 # -----------------
 bindsym $mod+Ctrl+Escape exec sudo systemctl hibernate
-bindsym $mod+Ctrl+c exec st -e calcurse
-bindsym $mod+Ctrl+e exec st -e vim 
+bindsym $mod+Ctrl+c exec $term -e calcurse
+bindsym $mod+Ctrl+e exec $term -e vim 
 bindsym $mod+Ctrl+f exec firefox
 bindsym $mod+Ctrl+k exec pkill polybar
-bindsym $mod+Ctrl+m exec st -e cmus
-bindsym $mod+Ctrl+p exec st -e castero
-bindsym $mod+Ctrl+r exec st -e ranger ~/
-bindsym $mod+Ctrl+u exec st -e yay -Syu
-bindsym $mod+Ctrl+v exec st -e vim ~/@/@Inbox/new.temp
+bindsym $mod+Ctrl+m exec $term -e cmus
+bindsym $mod+Ctrl+p exec $term -e castero
+bindsym $mod+Ctrl+r exec $term -e ranger ~/
+bindsym $mod+Ctrl+u exec $term -e yay -Syu
+bindsym $mod+Ctrl+v exec $term -e vim ~/@/@Inbox/new.temp
 bindsym $mod+Ctrl+w exec wal -si ~/Pictures/Wallpapers --iterative -o ~/.local/bin/wal-scripts
-bindsym $mod+Ctrl+y exec st -e youtube-viewer -C --player=mpv --invidious
-bindsym $mod+Ctrl+z exec st -e youtube-viewer -C --player=mpv --channels --invidious
+bindsym $mod+Ctrl+y exec $term -e youtube-viewer -C --player=mpv --invidious
+bindsym $mod+Ctrl+z exec $term -e youtube-viewer -C --player=mpv --channels --invidious
 #bindsym $mod+Ctrl+minus exec xinput set-prop 18 "Device Enabled" 0
 #bindsym $mod+Ctrl+equals exec xinput set-prop 18 "Device Enabled" 1
 
 # Common personal files
-bindsym $mod+Ctrl+1 exec st -e vim ~/Sync/Todo/todo.txt
-bindsym $mod+Ctrl+2 exec st -e vim ~/Sync/Todo/recur.txt
-bindsym $mod+Ctrl+3 exec st -e vim ~/Sync/Todo/habits.txt
-bindsym $mod+Ctrl+4 exec st -e vim ~/Sync/Todo/clock.txt
-bindsym $mod+Ctrl+5 exec st -e vim ~/Sync/Todo/waiting.txt
-bindsym $mod+Ctrl+6 exec st -e vim ~/Sync/Todo/someday.txt
+bindsym $mod+Ctrl+1 exec $term -e vim ~/Sync/Todo/todo.txt
+bindsym $mod+Ctrl+2 exec $term -e vim ~/Sync/Todo/recur.txt
+bindsym $mod+Ctrl+3 exec $term -e vim ~/Sync/Todo/habits.txt
+bindsym $mod+Ctrl+4 exec $term -e vim ~/Sync/Todo/clock.txt
+bindsym $mod+Ctrl+5 exec $term -e vim ~/Sync/Todo/waiting.txt
+bindsym $mod+Ctrl+6 exec $term -e vim ~/Sync/Todo/someday.txt
 
 # Common config files
-bindsym $mod+Ctrl+F1 exec st -e vim ~/.xinitrc
-bindsym $mod+Ctrl+F2 exec st -e vim ~/.config/i3/config
-bindsym $mod+Ctrl+F3 exec st -e vim ~/.config/polybar/config
-bindsym $mod+Ctrl+F4 exec st -e vim ~/.config/st/config.h
-bindsym $mod+Ctrl+F5 exec st -e vim ~/.zshrc
-bindsym $mod+Ctrl+F6 exec st -e vim ~/.vimrc
-bindsym $mod+Ctrl+F11 exec st -e bluetoothctl
-bindsym $mod+Ctrl+F12 exec st -e nmtui
+bindsym $mod+Ctrl+F1 exec $term -e vim ~/.xinitrc
+bindsym $mod+Ctrl+F2 exec $term -e vim ~/.config/i3/config
+bindsym $mod+Ctrl+F3 exec $term -e vim ~/.config/polybar/config
+bindsym $mod+Ctrl+F4 exec $term -e vim ~/.config/st/config.h
+bindsym $mod+Ctrl+F5 exec $term -e vim ~/.zshrc
+bindsym $mod+Ctrl+F6 exec $term -e vim ~/.vimrc
+bindsym $mod+Ctrl+F11 exec $term -e bluetoothctl
+bindsym $mod+Ctrl+F12 exec $term -e nmtui
 
 # Startup
 #-----------------

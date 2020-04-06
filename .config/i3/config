@@ -216,7 +216,7 @@ bindsym $mod+Ctrl+Escape exec sudo systemctl hibernate
 bindsym $mod+Ctrl+c exec st -e calcurse
 bindsym $mod+Ctrl+e exec st -e vim 
 bindsym $mod+Ctrl+f exec firefox
-bindsym $mod+Ctrl+k exec keepassxc
+bindsym $mod+Ctrl+k exec pkill polybar
 bindsym $mod+Ctrl+m exec st -e cmus
 bindsym $mod+Ctrl+p exec st -e castero
 bindsym $mod+Ctrl+r exec st -e ranger ~/

@@ -27,12 +27,12 @@ border-color = $00000000
 fixed-center = true
 override-redirect = true
 
-width = 21%:-12
+width = 19%:-11
 height = 30
 padding-left = 0
 padding-right = 4
 radius = 10
-offset-x = 2%:18
+offset-x = 2%:20
 offset-y = 7
 
 line-size = 0
@@ -68,12 +68,12 @@ foreground = ${colors.foreground}
 fixed-center = true
 override-redirect = true
 
-width = 23%
+width = 12%
 height = 30
 padding-left = 0
 padding-right = 4
 radius = 10
-offset-x = 38%:20
+offset-x = 42%:43
 offset-y = 7
 
 line-size = 0
@@ -109,12 +109,12 @@ foreground = ${colors.foreground}
 fixed-center = true
 override-redirect = true
 
-width = 22%:7
+width = 23%
 height = 30
-padding-left = 0
-padding-right = 4
+padding-left = 5
+padding-right = 1
 radius = 10
-offset-x = 74%:14
+offset-x = 74%
 offset-y = 7
 
 line-size = 0
@@ -222,7 +222,7 @@ type = internal/date
 interval = 5
 date-alt = " %Y-%m-%d"
 time = %l:%M %p
-time-alt = %H:%M:%S
+time-alt = %H:%M
 
 format-prefix = 
 format-padding = 2

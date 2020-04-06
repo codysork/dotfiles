@@ -60,7 +60,6 @@ set incsearch
 set hlsearch
 set number
 set pastetoggle=<F11>
-set signcolumn=yes
 set softtabstop=4
 set shiftwidth=4
 set shortmess+=c

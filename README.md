@@ -1,7 +1,7 @@
 # dotfiles
 My dotfiles for my Arch Linux setup. It makes your desktop look beautiful, and has lots of useful custom hotkeys.
 
-<img src="https://raw.githubusercontent.com/codysork/dotfiles/master/Pictures/Screenshots/screenshot2.png" />
+<img src="https://raw.githubusercontent.com/codysork/dotfiles/master/Pictures/Screenshots/screenshot1.png" />
 
 ## Installation and setup
 ### Install the official packages
@@ -25,14 +25,6 @@ These can be downloaded from the Arch User Respositories, or you can download th
 
 ```
 yay -S castero compton-tryone-git i3-gaps-rounded-git python-pywal youtube-viewer
-```
-
-### st installation
-
-My dotfiles include [Luke Smith's fork of st](https://github.com/lukesmithxyz/st/tree/131bdf67fda75365e289a2d76ab5c7b242d7fde2). To install st:
-``` 
-cd ~/.config/st/
-sudo make install 
 ```
 
 ### todo.txt setup

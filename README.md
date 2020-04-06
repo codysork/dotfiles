@@ -71,7 +71,7 @@ to whatever directory you will be using for your todo.txt files.
 - ` Ctrl ` + ` Super ` + ` c `: open calcurse
 - ` Ctrl ` + ` Super ` + ` e `: open Vim
 - ` Ctrl ` + ` Super ` + ` f `: open Firefox
-- ` Ctrl ` + ` Super ` + ` k `: open KeepassXC
+- ` Ctrl ` + ` Super ` + ` k `: kill polybar
 - ` Ctrl ` + ` Super ` + ` m `: open cmus
 - ` Ctrl ` + ` Super ` + ` p `: open castero
 - ` Ctrl ` + ` Super ` + ` w `: change your wallpaper (and keyboard LEDs if using my [msi-xresources script](https://github.com/codysork/msi-xresources)).

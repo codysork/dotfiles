@@ -104,7 +104,7 @@ html#main-window {
 
 /* Text that says: This time, search with: */
 #urlbar-one-offs-header-label {
-	font-family: "Cantarell", sans-serif !important;
+	font-family: "Source Code Pro", sans-serif !important;
 	font-size: 14pt !important;
 	font-weight: 700 !important;
 }

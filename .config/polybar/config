@@ -114,7 +114,7 @@ height = 30
 padding-left = 5
 padding-right = 1
 radius = 10
-offset-x = 74%:8
+offset-x = 74%:7
 offset-y = 10
 
 line-size = 0

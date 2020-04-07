@@ -66,7 +66,7 @@ to whatever directory you will be using for your todo.txt files.
 - ` Ctrl ` + ` Super ` + ` k `: kill polybar
 - ` Ctrl ` + ` Super ` + ` m `: open cmus
 - ` Ctrl ` + ` Super ` + ` p `: open castero
-- ` Ctrl ` + ` Super ` + ` w `: change your wallpaper (and keyboard LEDs if using my [msi-xresources script](https://github.com/codysork/msi-xresources)).
+- ` Ctrl ` + ` Super ` + ` w `: change your wallpaper (and keyboard LEDs if using my [msi-pywal-keycolors](https://github.com/codysork/msi-pywal-keycolors)).
 - ` Ctrl ` + ` Super ` + ` y `: open youtube-viewer video search (videos open in mpv)
 - ` Ctrl ` + ` Super ` + ` z `: open youtube-viewer channel search (videos open in mpv)
 

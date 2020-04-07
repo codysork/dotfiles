@@ -67,11 +67,11 @@ to whatever directory you will be using for your todo.txt files.
 - ` Ctrl ` + ` Super ` + ` m `: open cmus
 - ` Ctrl ` + ` Super ` + ` p `: open castero
 - ` Ctrl ` + ` Super ` + ` w `: change your wallpaper (and keyboard LEDs if using my [msi-pywal-keycolors](https://github.com/codysork/msi-pywal-keycolors) script).
-- ` Ctrl ` + ` Super ` + ` y `: open youtube-viewer video search (videos open in mpv)
-- ` Ctrl ` + ` Super ` + ` z `: open youtube-viewer channel search (videos open in mpv)
-
-  Unless you have an MSI laptop like I do, you will want delete or comment out this line from ` ~/.local/bin/wal-scripts `:
+    Unless you have an MSI laptop like I do, you will want delete or comment out this line from ` ~/.local/bin/wal-scripts `:
   ```
   sh keycolors 
   ```
+- ` Ctrl ` + ` Super ` + ` y `: open youtube-viewer video search (videos open in mpv)
+- ` Ctrl ` + ` Super ` + ` z `: open youtube-viewer channel search (videos open in mpv)
+
   

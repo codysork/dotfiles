@@ -27,7 +27,7 @@ border-color = $00000000
 fixed-center = true
 override-redirect = true
 
-width = 19%:-11
+width = 19%
 height = 30
 padding-left = 0
 padding-right = 4
@@ -68,12 +68,12 @@ foreground = ${colors.foreground}
 fixed-center = true
 override-redirect = true
 
-width = 22%:10
+width = 22%:25
 height = 30
 padding-left = 4
 padding-right = 0
 radius = 10
-offset-x = 18%:46
+offset-x = 20%:10
 offset-y = 10
 
 line-size = 0

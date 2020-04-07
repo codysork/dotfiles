@@ -1,6 +1,8 @@
 # dotfiles
 My dotfiles for my Arch Linux setup. It makes your desktop look beautiful, and has lots of useful custom hotkeys.
 
+I also created a public branch of this repo with fewer personalized features in it, so that it's better suited for general public use.
+
 <img src="https://raw.githubusercontent.com/codysork/dotfiles/master/Pictures/Screenshots/screenshot2.png" />
 
 ## Installation and setup

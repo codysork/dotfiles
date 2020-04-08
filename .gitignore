@@ -2,6 +2,9 @@
 .* 
 # Exclude all home directories by default
 */ 
+# Exclude my personal html and css files
+*html
+*css
 
 # Excluded config files
 .config/*

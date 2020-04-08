@@ -49,6 +49,7 @@ let g:vim_markdown_folding_disabled = 1
 " Preferred Settings
 "
 filetype indent plugin on     " required
+filetype indent on
 set backspace=indent,eol,start
 set cmdheight=2 " more space for displaying messages
 set confirm
@@ -60,8 +61,8 @@ set incsearch
 set hlsearch
 set number
 set pastetoggle=<F11>
-set softtabstop=4
-set shiftwidth=4
+set softtabstop=2
+set shiftwidth=2
 set shortmess+=c
 set showcmd
 set wildmenu

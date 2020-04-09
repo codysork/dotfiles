@@ -110,13 +110,13 @@ border-color = $00000000
 fixed-center = true
 override-redirect = true
 
-width = 42%:2
+width = 28%
 height = 30
 padding-left = 0
 padding-right = 0
 radius = 10
-offset-x = 2%:13
-offset-y = 99%:-30
+offset-x = 45%:10
+offset-y = 10
 
 line-size = 0
 line-color = #f00

@@ -69,12 +69,12 @@ foreground = ${colors.foreground}
 fixed-center = true
 override-redirect = true
 
-width = 23%
+width = 46%:-1
 height = 30
-padding-left = 5
+padding-left = 1
 padding-right = 1
 radius = 10
-offset-x = 74%:7
+offset-x = 51%:6
 offset-y = 10
 
 line-size = 0
@@ -86,6 +86,7 @@ font-2 = "Font Awesome 5 Brands:size=10;1"
 font-3 = "NotoEmoji Nerd Font:size=10;1"
 font-4 = "Noto Sans Symbols2:size=10;1"
 
+modules-left = todo
 modules-right = wlan eth cpu memory temperature pulseaudio backlight battery
 
 tray-position = none
@@ -100,49 +101,6 @@ dim-value = 1.0
 
 cursor-click = pointer
 cursor-scroll = ns-resize
-
-[bar/todo]
-background = ${colors.background}
-foreground = ${colors.foreground}
-overline-color = ${colors.main}
-border-color = $00000000
-
-fixed-center = true
-override-redirect = true
-
-width = 28%
-height = 30
-padding-left = 0
-padding-right = 0
-radius = 10
-offset-x = 45%:10
-offset-y = 10
-
-line-size = 0
-line-color = #f00
-
-font-0 = "Source Code Pro Semibold:size=10;1"
-font-1 = "Font Awesome 5 Free:style=Solid:size=10;1"
-font-2 = "Font Awesome 5 Brands:size=10;1"
-font-3 = "NotoEmoji Nerd Font:size=10;1"
-font-4 = "Noto Sans Symbols2:size=10;1"
-
-modules-left = todo
-
-tray-position = none
-tray-detached = false
-tray-maxsize = 16
-tray-offset-x = 0
-tray-offset-y = 0
-tray-padding = 0
-tray-scale = 1.0
-
-dim-value = 1.0
-
-cursor-click = pointer
-cursor-scroll = ns-resize
-
-
 
 [module/i3]
 type = internal/i3
@@ -214,7 +172,7 @@ format-padding = 2
 ;
 [module/todo]
 type = custom/script
-exec = ~/Scripts/todo/todo.sh -p lsp a | sed "s/[\+@].*$//g"
+exec = ~/Scripts/todo/todo.sh -p lsp a | sed "s/[\@].*$//g"
 interval = 30
 format-padding = 1
 

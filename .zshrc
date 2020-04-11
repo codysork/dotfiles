@@ -24,8 +24,10 @@ export CDPATH=$HOME
 # Useful Aliases
 alias h="history | tail"
 alias hg="history | grep"
+alias mv="mv -i"
 alias pip-upgrade="sudo pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 sudo pip install -U"
 eval $(thefuck --alias)
+alias please="sudo" # add some humor to your shell
 alias rm='rm -i'
 
 # Aliases only useful to me
@@ -34,7 +36,6 @@ alias cooleroff="sudo isw -b off"
 alias cooleron="sudo isw -b on"
 alias habits="vim ~/Sync/Todo/habits.txt"
 alias keycolors="msi-perkeyrgb -m gs65"
-alias please="sudo" # add some humor to your shell
 alias pluck-bm-import="cat ~/.bookmarks.txt | sed '/\(^#.*$\)|\(^$\)/d' | sed 's/&\[.*\] \| *+.*$//g' | xargs -I {} echo 'Allow {}' | pluck import -"
 alias pluck-scripts-exec="ls -1 ~/Scripts/pluckeye-scripts/ | sed 's/~\/.*\/.*\///g' | dmenu | xargs -I {} sh '{}'"
 alias todo="sh ~/Scripts/todo/todo.sh"

@@ -1,5 +1,6 @@
 #!/bin/bash
 wal -i ~/Pictures/Wallpapers --iterative
 spicetify update
-sh ~/.local/bin/keycolors
 sh ~/Scripts/pywal-discord/pywal-discord
+wal_steam -w
+sh ~/.local/bin/keycolors

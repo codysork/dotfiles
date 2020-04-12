@@ -13,9 +13,9 @@ compositing-border = over
 [colors]
 background = ${xrdb:color0}
 foreground = ${xrdb:color15}
+base = ${xrdb:color0}
 main = ${xrdb:color1}
-secondary = ${xrdb:color2}
-accent = ${xrdb:color5}
+accent = ${xrdb:color4}
 
 [bar/base]
 background = ${colors.background}
@@ -23,7 +23,6 @@ foreground = ${colors.foreground}
 overline-color = ${colors.main}
 fixed-center = true
 height = 30
-padding-right = 0
 line-size = 0
 line-color = #f00
 tray-position = none
@@ -70,11 +69,12 @@ label-mode-padding = 2
 
 label-focused = %icon% 
 label-focused-background = ${colors.accent}
-label-focused-foreground = ${colors.background}
+label-focused-foreground = ${colors.foreground}
 label-focused-padding = 2
 
 label-unfocused = %icon%
 label-unfocused-background = ${colors.main}
+label-unfocused-foreground = ${colors.foreground}
 label-unfocused-padding = 2
 
 label-visible = %index%
@@ -84,7 +84,7 @@ label-visible-padding = 2
 
 label-urgent = %icon% 
 label-urgent-background = #FF0000
-label-urgent-foreground = #FFFFFF
+label-urgent-foreground = ${colors.base}
 label-urgent-padding = 2
 
 [module/wlan]
@@ -129,7 +129,6 @@ time-alt = %H:%M
 
 format-prefix = 
 format-padding = 2
-format-background = ${colors.background}
 label = %date% %time%
 
 
@@ -138,9 +137,7 @@ type = custom/script
 exec = ~/.config/polybar/scripts/openweathermap-fullfeatured.sh
 interval = 600
 label-font = 3
-
 format-padding = 2
-format-background = ${colors.background}
 
 [module/polypomo]
 type = custom/script
@@ -149,7 +146,7 @@ exec = ~/.config/polybar/scripts/polypomo
 tail = true
 
 format-padding = 1
-format-background = ${colors.secondary}
+format-background = ${colors.main}
 format-foreground = ${colors.background}
 
 label = %output%

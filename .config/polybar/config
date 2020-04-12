@@ -13,9 +13,10 @@ compositing-border = over
 [colors]
 background = ${xrdb:color0}
 foreground = ${xrdb:color15}
+foreground2 = ${xrdb:color0}
 base = ${xrdb:color0}
 main = ${xrdb:color1}
-accent = ${xrdb:color4}
+accent = ${xrdb:color5}
 
 [bar/base]
 background = ${colors.background}
@@ -69,12 +70,12 @@ label-mode-padding = 2
 
 label-focused = %icon% 
 label-focused-background = ${colors.accent}
-label-focused-foreground = ${colors.foreground}
+label-focused-foreground = ${colors.foreground2}
 label-focused-padding = 2
 
 label-unfocused = %icon%
 label-unfocused-background = ${colors.main}
-label-unfocused-foreground = ${colors.foreground}
+label-unfocused-foreground = ${colors.foreground2}
 label-unfocused-padding = 2
 
 label-visible = %index%

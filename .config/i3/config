@@ -208,9 +208,6 @@ client.placeholder      $bg     $bg     $fg  $bg       $bg
 
 client.background       $bg
 
-# Gaps
-gaps inner 4
-
 # My Custom Hotkeys
 # -----------------
 bindsym $mod+Ctrl+Escape exec sudo systemctl hibernate

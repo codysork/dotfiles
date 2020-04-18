@@ -24,6 +24,7 @@ export CDPATH=$HOME
 # Useful Aliases
 alias h="history | tail"
 alias hg="history | grep"
+alias ls="lsd"
 alias mv="mv -i"
 alias pip-upgrade="sudo pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 sudo pip install -U"
 eval $(thefuck --alias)

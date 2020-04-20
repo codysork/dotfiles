@@ -245,7 +245,7 @@ input#urlbar-input {
 /* Minimalist navbar*/
 
 #main-window:not([customizing]) #navigator-toolbox:not(:focus-within):not(:hover) {
-	margin-top: -85px;
+	margin-top: -80px;
 }
 
 #navigator-toolbox {

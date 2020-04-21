@@ -231,23 +231,23 @@ input#urlbar-input {
 /* *******************************************************************
 	Settings menu pop-up
 */
-.panel-arrowbox {
-	margin: 0 !important;
-	display: none !important;
-}
+/*.panel-arrowbox {*/
+	/*margin: 0 !important;*/
+	/*display: none !important;*/
+/*}*/
 
-.panel-arrowcontent {
-	opacity: 1 !important;
-	margin: 0 !important;
-}
+/*.panel-arrowcontent {*/
+	/*opacity: 1 !important;*/
+	/*margin: 0 !important;*/
+/*}*/
 
 
-/* Minimalist navbar*/
+/*[> Minimalist navbar<]*/
 
-#main-window:not([customizing]) #navigator-toolbox:not(:focus-within):not(:hover) {
-	margin-top: -80px;
-}
+/*#main-window:not([customizing]) #navigator-toolbox:not(:focus-within):not(:hover) {*/
+	/*margin-top: -80px;*/
+/*}*/
 
-#navigator-toolbox {
-	transition: 0.2s margin-top ease-out;
-}
+/*#navigator-toolbox {*/
+	/*transition: 0.2s margin-top ease-out;*/
+/*}*/

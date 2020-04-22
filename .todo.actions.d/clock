@@ -10,11 +10,11 @@ TODO_FILE="/home/cody/Sync/Todo/now/todo.txt"
 TODO_SH="/home/cody/Scripts/todo/todo.sh"
 
 function usage {
-  echo " Clock:"
-  echo "   clock in ITEM "
-  echo "     Start a clock for ITEM, beginning now"
-  echo "   clock out"
-  echo "     End the current running clock"
+  echo "    clock in ITEM "
+  echo "      Start a clock for ITEM, beginning now"
+  echo ""
+  echo "    clock out"
+  echo "      End the current running clock"
   echo ""
   exit
 }

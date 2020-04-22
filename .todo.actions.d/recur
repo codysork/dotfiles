@@ -7,8 +7,7 @@ use Todotxt::Recurlist;
 
 if ((@ARGV > 0) && ($ARGV[0] eq 'usage'))
   {
-      print "  Recurring tasks:\n" .
-	"    recur\n" .
+      print "    recur\n" .
 	"      insert appropriate recurring tasks from $ENV{TODO_DIR}/recur.txt\n" .
 	"\n";
       exit(0);

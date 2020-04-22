@@ -1,0 +1,49 @@
+#!/bin/bash
+#
+# Clock in or out of a task in hamster time tracker
+# Requirements: hamster-time-tracker
+
+action=$1
+shift
+
+TODO_FILE="/home/cody/Sync/Todo/now/todo.txt"
+TODO_SH="/home/cody/Scripts/todo/todo.sh"
+
+function usage {
+  echo " Clock:"
+  echo "   clock in ITEM "
+  echo "     Start a clock for ITEM, beginning now"
+  echo "   clock out"
+  echo "     End the current running clock"
+  echo ""
+  exit
+}
+
+[ "$action" = "usage" ] && usage
+
+# make sure we have an item number
+SECONDARY_CMD=$1
+ITEM=$2
+
+if [[ $SECONDARY_CMD == "in" ]]; then
+
+    # check for proper usage
+    if ! [[ "$ITEM" =~ ^[0-9]+$ ]]; then
+        echo "Error! Usage:"
+        usage
+        exit
+    fi
+
+    # pull the line from the todo file
+    LINE=$(sed "$ITEM!d" "$TODO_FILE")
+    TASK=$(echo $LINE | sed "s/([A-Z]) //g" | sed "s/[\@\+].*$//")
+    PROJECT=$(echo $LINE | cut -d '+' -f2 | sed "s/@.*$//g")
+    echo "Clocking in for $LINE..."
+    hamster add "$TASK@$PROJECT -0"
+
+    elif [[ "$SECONDARY_CMD" == "out" ]]; then
+        hamster stop
+        echo "Clocking out..."
+    else
+        usage
+fi

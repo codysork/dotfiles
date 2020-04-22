@@ -3,15 +3,18 @@
 # Clock in or out of a task in hamster time tracker
 # Requirements: hamster-time-tracker
 
-action=$1
-shift
-
 TODO_FILE="/home/cody/Sync/Todo/now/todo.txt"
 TODO_SH="/home/cody/Scripts/todo/todo.sh"
 
+#=========================================================
+
+action=$1
+shift
+
 function usage {
-  echo "    clock in ITEM "
-  echo "      Start a clock for ITEM, beginning now"
+  echo "    clock in ITEM#"
+  echo "      Start a clock for ITEM, beginning now. This clock entry is"
+  echo "      written to your GNOME hamster database."
   echo ""
   echo "    clock out"
   echo "      End the current running clock"
@@ -25,25 +28,47 @@ function usage {
 SECONDARY_CMD=$1
 ITEM=$2
 
-if [[ $SECONDARY_CMD == "in" ]]; then
+LINE=$(sed "$ITEM!d" "$TODO_FILE")
+LINE_NUM=$(grep -nr "$TASK" $TODO_FILE | head -n 1 | awk "{print $2;}")
+TASK=$(echo $LINE | sed "s/([A-Z]) //g" | sed "s/[\@\+].*$//")
 
-    # check for proper usage
+# Make sure task exists
+if [[ $TASK == "" ]]; then
+    echo "Task number $ITEM does not exist."
+
+elif [[ $SECONDARY_CMD == "in" ]]; then
+
     if ! [[ "$ITEM" =~ ^[0-9]+$ ]]; then
         echo "Error! Usage:"
         usage
         exit
     fi
-
-    # pull the line from the todo file
-    LINE=$(sed "$ITEM!d" "$TODO_FILE")
-    TASK=$(echo $LINE | sed "s/([A-Z]) //g" | sed "s/[\@\+].*$//")
+    
     PROJECT=$(echo $LINE | cut -d '+' -f2 | sed "s/@.*$//g")
-    echo "Clocking in for $LINE..."
+    echo "Clocking in $TASK..."
     hamster add "$TASK@$PROJECT -0"
 
-    elif [[ "$SECONDARY_CMD" == "out" ]]; then
+elif [[ "$SECONDARY_CMD" == "out" ]]; then
+      
+    # Make sure the proper task number is passed to this script,
+    # or none at all.
+    if [[ $ITEM == "" ]] || [[ $ITEM == $LINE_NUM ]]; then
+        TASK=$(hamster current | sed "s/[0-9:-]//g" | sed "s/  //g" | 
+          sed "s/@.*$//g")
+        echo "Clocking out $TASK..."
         hamster stop
-        echo "Clocking out..."
-    else
+
+    # Check to see if no clock is running
+    elif [[ $(hamster current) == "No activity" ]]; then
+        echo -e "No running clock."
+    elif ! [[ "$ITEM" == "$LINE_NUM" ]]; then
+        echo -e "No running clock for $TASK\b!"
+
+    else 
+        echo "Error! Usage:"
         usage
+    fi
+
+else
+    usage
 fi

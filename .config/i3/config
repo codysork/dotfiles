@@ -238,9 +238,6 @@ bindsym $mod+Ctrl+6 exec $term -e $editor ~/Sync/Todo/someday.txt
 bindsym $mod+Ctrl+F11 exec $term -e bluetoothctl
 bindsym $mod+Ctrl+F12 exec $term -e nmtui
 
-# Go to project
-bindsym $mod+Ctrl+F1 exec $term -e cd ~/Code/active_projects/codysork.com
-
 # Startup
 #-----------------
 # Network Settings

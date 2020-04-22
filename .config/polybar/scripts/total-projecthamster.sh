@@ -1,7 +1,5 @@
 #!/bin/sh
 
-totals=$(hamster list | tail -n 3)
+totals=$(hamster list | tail -n 2)
 
-if [ -n "$totals" ]; then
-    echo " $totals"
-fi
+echo " $totals"

@@ -3,7 +3,7 @@ My dotfiles for my Arch Linux setup. It makes your desktop look beautiful, and h
 
 I also created a [public branch](https://github.com/codysork/dotfiles/tree/public) of this repo with fewer personalized features in it, so that it's better suited for general public use.
 
-<img src="https://raw.githubusercontent.com/codysork/dotfiles/master/Pictures/Screenshots/screenshot2.png" />
+<img src="https://raw.githubusercontent.com/codysork/dotfiles/master/Pictures/Screenshots/screenshot1.png" />
 
 ## Installation and setup
 ### Install the official packages

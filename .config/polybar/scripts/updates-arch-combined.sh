@@ -15,6 +15,4 @@ updates=$(("$updates_arch" + "$updates_aur"))
 
 if [ "$updates" -gt 0 ]; then
     echo "ﮮ $updates"
-else
-    echo " $updates"
 fi

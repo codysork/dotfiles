@@ -2,7 +2,7 @@
 #
 # Author: Cody Sork
 # License: GPL
-# Version: 1.0.0
+# Version: 1.1.1
 # Description: Clock in or out of a task in hamster time tracker
 # Requirements: hamster-time-tracker
 
@@ -17,6 +17,9 @@ action=$1
 shift
 
 function usage {
+  echo "    clock cur"
+  echo "      Show the current running clock."
+  echo ""
   echo "    clock in ITEM#"
   echo "      Start a clock for ITEM, beginning now. This clock entry is"
   echo "      written to your GNOME hamster database."
@@ -24,6 +27,8 @@ function usage {
   echo "    clock out"
   echo "      End the current running clock"
   echo ""
+  echo "    clock report"
+  echo "      Show all clock totals for today."
   exit
 }
 
@@ -35,11 +40,16 @@ ITEM=$2
 
 LINE=$(sed "$ITEM!d" "$TODO_FILE")
 LINE_NUM=$(grep -nr "$TASK" $TODO_FILE | head -n 1 | awk "{print $2;}")
-TASK=$(echo $LINE | sed "s/([A-Z]) //g" | sed "s/[\@\+].*$//")
+TASK=$(echo $LINE | sed -r "s/(\([A-Z]\))?([\@\+].*$)?//g")
+echo $TASK
 
 # Make sure task exists
 if [[ $TASK == "" ]]; then
     echo "Task number $ITEM does not exist."
+
+# Show current running clock
+elif [[ "$SECONDARY_CMD" == "cur" ]]; then
+    hamster current
 
 elif [[ $SECONDARY_CMD == "in" ]]; then
 
@@ -58,8 +68,7 @@ elif [[ "$SECONDARY_CMD" == "out" ]]; then
     # Make sure the proper task number is passed to this script,
     # or none at all.
     if [[ $ITEM == "" ]] || [[ $ITEM == $LINE_NUM ]]; then
-        TASK=$(hamster current | sed "s/[0-9:-]//g" | sed "s/  //g" | 
-          sed "s/@.*$//g")
+        TASK=$(hamster current | sed -r "s/  [0-9:-]?//g" | sed "s/@.*$//g")
         echo "Clocking out $TASK..."
         hamster stop
 
@@ -73,6 +82,9 @@ elif [[ "$SECONDARY_CMD" == "out" ]]; then
         echo "Error! Usage:"
         usage
     fi
+
+elif [[ "$SECONDARY_CMD" == "report" ]]; then
+    hamster list
 
 else
     usage

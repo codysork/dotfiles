@@ -9,6 +9,7 @@
 # Excluded config files
 .config/*
 .config/i3/*
+.config/newsboat/urls
 .config/spicetify/Backup/*
 .config/youtube-viewer/api.json
 

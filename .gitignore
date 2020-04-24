@@ -35,6 +35,8 @@ Scripts/__pycache__/*
 !.config/compton.conf
 !.config/i3/
 !.config/i3/config
+!.config/newsboat/
+!.config/newsboat/config
 !.config/polybar/
 !.config/polybar/config
 !.config/polybar/scripts/

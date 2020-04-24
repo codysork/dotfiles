@@ -1,0 +1,18 @@
+auto-reload yes
+browser firefox
+reload-time 60
+
+# Colors
+color background           color15 color0 
+color info                 color15 color0 
+color article              color15 color0
+color listnormal           color1  color0
+color listnormal_unread    color4  color0
+color listfocus_unread     color5 color0
+color listfocus            color5  color0
+
+# Macros
+macro d set browser "youtube-dl %u"; open-in-browser ; set browser "elinks %u"
+macro v set browser "mpv %u"; open-in-browser ; set browser "elinks %u"
+
+

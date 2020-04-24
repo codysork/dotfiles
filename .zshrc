@@ -31,15 +31,7 @@ alias please="sudo" # add some humor to your shell
 alias rm='rm -i'
 
 # Aliases only useful to me
-alias clock="vim ~/Sync/Todo/clock.txt"
-alias cooleroff="sudo isw -b off"
-alias cooleron="sudo isw -b on"
-alias habits="vim ~/Sync/Todo/habits.txt"
-alias keycolors="msi-perkeyrgb -m gs65"
-alias pluck-bm-import="cat ~/.bookmarks.txt | sed '/\(^#.*$\)|\(^$\)/d' | sed 's/&\[.*\] \| *+.*$//g' | xargs -I {} echo 'Allow {}' | pluck import -"
-alias pluck-scripts-exec="ls -1 ~/Scripts/pluckeye-scripts/ | sed 's/~\/.*\/.*\///g' | dmenu | xargs -I {} sh '{}'"
 alias todo="sh ~/Scripts/todo/todo.sh"
-alias todoedit="vim ~/Sync/Todo/todo.txt"
 
 # Custom variables only useful to me
 fan_model="GS65_8RF"

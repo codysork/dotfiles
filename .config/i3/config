@@ -216,6 +216,7 @@ bindsym $mod+Ctrl+e exec $term -e $editor
 bindsym $mod+Ctrl+f exec firefox
 bindsym $mod+Ctrl+k exec pkill polybar
 bindsym $mod+Ctrl+m exec $term -e cmus
+bindsym $mod+Ctrl+n exec $term -e newsboat
 bindsym $mod+Ctrl+p exec $term -e castero
 bindsym $mod+Ctrl+r exec $term -e ranger ~/
 bindsym $mod+Ctrl+u exec $term -e yay -Syu
@@ -228,11 +229,11 @@ bindsym $mod+Ctrl+z exec $term -e straw-viewer -C --player=mpv --channels
 
 # Common personal files
 bindsym $mod+Ctrl+1 exec $term -e $editor ~/Sync/Todo/todo.txt
-bindsym $mod+Ctrl+2 exec $term -e $editor ~/Sync/Todo/recur.txt
-bindsym $mod+Ctrl+3 exec $term -e $editor ~/Sync/Todo/habits.txt
-bindsym $mod+Ctrl+4 exec $term -e $editor ~/Sync/Todo/clock.txt
-bindsym $mod+Ctrl+5 exec $term -e $editor ~/Sync/Todo/waiting.txt
-bindsym $mod+Ctrl+6 exec $term -e $editor ~/Sync/Todo/someday.txt
+bindsym $mod+Ctrl+2 exec $term -e $editor ~/.config/newsboat/urls
+
+# Common config files
+bindsym $mod+Ctrl+F1 exec $term -e $editor ~/.config/i3/config
+bindsym $mod+Ctrl+F2 exec $term -e $editor ~/.config/polybar/config.ini
 
 # Networking
 bindsym $mod+Ctrl+F11 exec $term -e bluetoothctl
@@ -253,5 +254,5 @@ exec redshift
 exec sudo mount /dev/sda ~/External # auto mount my external hard drive
 
 # Peripheral Settings
-#exec xinput | awk '/Touch/ {print $6}' | sed 's/id=//g' | xargs -I {} xinput set-prop {} "Device Enabled" 0
+exec xinput | awk '/Touch/ {print $6}' | sed 's/id=//g' | xargs -I {} xinput set-prop {} "Device Enabled" 0
 

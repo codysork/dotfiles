@@ -251,8 +251,12 @@ exec wal -si ~/Pictures/Wallpapers
 exec sh ~/.local/bin/keycolors
 exec_always --no-startup-id ~/.config/polybar/scripts/launch.sh &
 exec redshift
-exec sudo mount /dev/sda ~/External # auto mount my external hard drive
+exec sudo mount /dev/sda /home/external # auto mount my external hard drive
 
 # Peripheral Settings
 exec xinput | awk '/Touch/ {print $6}' | sed 's/id=//g' | xargs -I {} xinput set-prop {} "Device Enabled" 0
 
+# Activity Watch
+exec aw-server
+exec aw-watcher-afk
+exec aw-watcher-window

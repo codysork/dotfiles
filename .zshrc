@@ -10,7 +10,6 @@ source $ZSH/oh-my-zsh.sh
 
 # Preferred editor
 export EDITOR='nvim'
-alias vim="nvim" 
 
 # Compilation flags
 export ARCHFLAGS="-arch x86_64"

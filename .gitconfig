@@ -11,3 +11,7 @@
 	editor = vim
 [merge]
 	tool = vimdiff
+[http]
+	proxy = http://localhost:8080
+[https]
+	proxy = http://localhost:8080

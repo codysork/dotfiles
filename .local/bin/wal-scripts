@@ -1,6 +1,10 @@
 #!/bin/bash
+
+source "${HOME}/.cache/wal/colors.sh"
+
 wal -i ~/Pictures/Wallpapers --iterative
 spicetify update
 sh ~/Scripts/pywal-discord/pywal-discord
 wal_steam -w
 sh ~/.local/bin/keycolors
+sh ~/.loca/bin/dunstwal

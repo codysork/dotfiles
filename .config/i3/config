@@ -20,13 +20,16 @@ default_floating_border pixel 2
 new_window pixel 2
 new_float pixel 2
 
+gaps inner 8
+smart_gaps on
+
 bindsym $mod+u border none
 bindsym $mod+y border pixel 2
 bindsym $mod+n border normal
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:Source Code Pro Semibold 13
+font pango:Source Code Pro Semibold 10
 #font pango:hack 13
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
@@ -236,6 +239,9 @@ bindsym $mod+Ctrl+F1 exec $term -e $editor ~/.config/i3/config
 bindsym $mod+Ctrl+F2 exec $term -e $editor ~/.config/polybar/config.ini
 
 # Networking
+bindsym $mod+Shift+b exec sh /home/cody/Scripts/cron/remote-backup.sh
+bindsym $mod+Shift+n exec sh /home/cody/Scripts/restart_network_services.sh
+bindsym $mod+Shift+p exec sh /home/cody/Scripts/restart_proxy.sh
 bindsym $mod+Ctrl+F11 exec $term -e bluetoothctl
 bindsym $mod+Ctrl+F12 exec $term -e nmtui
 

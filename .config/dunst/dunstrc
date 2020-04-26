@@ -44,7 +44,7 @@
     frame_width = 2
 
     # The frame color and width of the notification
-    frame_color = "#E7A149"
+    frame_color = "#655783"
 
     # How long a user needs to be idle for sticky notifications
     idle_threshold = 120
@@ -56,10 +56,6 @@
     alignment = left
     word_wrap = yes
     font = Source Code Pro Semibold 10
-
-    # Format for how notifications will be displayed
-    # Usage: `notify-send 'Title' 'Summary'`
-    format = "<b>%s</b>: %b"
 
     # Allow some HTML tags like <i> and <u> in notifications
     markup = full
@@ -168,22 +164,22 @@
 
 # Set the background and foreground (text) color for all notifications
 [urgency_low]
-    background = "#1e1107"
-    foreground = "#E7A149"
+    background = "#0c1216"
+    foreground = "#655783"
     timeout = 10
     # Icon for notifications with low urgency, uncomment to enable
     #icon = /usr/share/icons/gnome/32x32/status/info.png
 
 [urgency_normal]
-    background = "#1e1107"
-    foreground = "#E7A149"
+    background = "#0c1216"
+    foreground = "#655783"
     timeout = 10
     # Icon for notifications with normal urgency, uncomment to enable
     #icon =  /usr/share/icons/gnome/32x32/status/starred.png
 
 [urgency_critical]
-    background = "#1e1107"
-    foreground = "#E7A149"
+    background = "#0c1216"
+    foreground = "#655783"
     timeout = 0
     # Icon for notifications with critical urgency, uncomment to enable
     #icon =  /usr/share/icons/gnome/32x32/status/important.png

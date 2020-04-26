@@ -1,6 +1,6 @@
 # i3 config file (v1)
 set $mod Mod4
-set $term urxvt
+set $term xst
 set $editor nvim
 
 # Set colors from Xresources
@@ -21,7 +21,7 @@ new_window pixel 2
 new_float pixel 2
 
 gaps inner 8
-smart_gaps on
+#smart_gaps on
 
 bindsym $mod+u border none
 bindsym $mod+y border pixel 2
@@ -217,7 +217,7 @@ bindsym $mod+Ctrl+Escape exec sudo systemctl hibernate
 bindsym $mod+Ctrl+c exec $term -e calcurse
 bindsym $mod+Ctrl+e exec $term -e $editor 
 bindsym $mod+Ctrl+f exec firefox
-bindsym $mod+Ctrl+k exec pkill polybar
+bindsym $mod+Ctrl+k exec sudo msi-perkeyrgb -m "gs65" -s 110000
 bindsym $mod+Ctrl+m exec $term -e cmus
 bindsym $mod+Ctrl+n exec $term -e newsboat
 bindsym $mod+Ctrl+p exec $term -e castero
@@ -240,8 +240,9 @@ bindsym $mod+Ctrl+F2 exec $term -e $editor ~/.config/polybar/config.ini
 
 # Networking
 bindsym $mod+Shift+b exec sh /home/cody/Scripts/cron/remote-backup.sh
-bindsym $mod+Shift+n exec sh /home/cody/Scripts/restart_network_services.sh
-bindsym $mod+Shift+p exec sh /home/cody/Scripts/restart_proxy.sh
+bindsym $mod+Shift+n exec sh /home/cody/Scripts/personal/restart_network_services.sh
+bindsym $mod+Shift+p exec sh /home/cody/Scripts/personal/restart_proxy.sh
+bindsym $mod+Shift+v exec sh /home/cody/Scripts/personal/restart_vpn.sh
 bindsym $mod+Ctrl+F11 exec $term -e bluetoothctl
 bindsym $mod+Ctrl+F12 exec $term -e nmtui
 

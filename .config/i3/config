@@ -240,6 +240,7 @@ bindsym $mod+Ctrl+F2 exec $term -e $editor ~/.config/polybar/config.ini
 
 # Networking
 bindsym $mod+Shift+b exec sh /home/cody/Scripts/cron/remote-backup.sh
+#bindsym $mod+Shift+k exec killall polybar
 bindsym $mod+Shift+n exec sh /home/cody/Scripts/personal/restart_network_services.sh
 bindsym $mod+Shift+p exec sh /home/cody/Scripts/personal/restart_proxy.sh
 bindsym $mod+Shift+v exec sh /home/cody/Scripts/personal/restart_vpn.sh

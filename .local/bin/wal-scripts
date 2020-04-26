@@ -2,11 +2,12 @@
 
 source "${HOME}/.cache/wal/colors.sh"
 
-notify-send "Changing color scheme..."
+
 wal -i ~/Pictures/Wallpapers --iterative
+sh ~/.local/bin/dunstwal
+notify-send "Changing color scheme..."
 #spicetify update
 wal_steam -w
 sh ~/Scripts/wal-discord/wal-discord
 sh ~/.local/bin/keycolors
-sh ~/.local/bin/dunstwal
-notify-send "Color scheme update complete."
+

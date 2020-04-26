@@ -1,10 +1,14 @@
 # Exclude all dotfiles on home directory by default
 .* 
+
 # Exclude all home directories by default
 */ 
-# Exclude my personal html and css files
-*html
+
+# Hidden file types
 *css
+*html
+*mkv
+*webm
 
 # Excluded config files
 .config/*

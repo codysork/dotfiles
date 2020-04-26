@@ -20,6 +20,7 @@
 
 # Excluded scripts
 Scripts/__pycache__/*
+Scripts/cron/*
 
 # Other excluded
 ./local/*

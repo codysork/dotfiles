@@ -1,3 +1,5 @@
+export PATH=$PATH:~/.local/bin
+
 # Oh My zsh
 export ZSH="/home/cody/.oh-my-zsh"
 
@@ -21,6 +23,7 @@ autoload -U colors && colors
 export CDPATH=$HOME
 
 # Useful Aliases
+alias ah="sh ~/Scripts/self-control/delayed-admin/admin-helper.sh"
 alias h="history | tail"
 alias hg="history | grep"
 alias mv="mv -i"

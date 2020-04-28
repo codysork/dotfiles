@@ -47,11 +47,6 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 
-# Don’t treat Plasma pop-ups as full-sized windows
-for_window [class="plasmashell"] floating enable
-
-# Don’t spawn an empty window for the Plasma Desktop
-for_window [title="Desktop — Plasma"] kill, floating enable, border none
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -239,11 +234,11 @@ bindsym $mod+Ctrl+F1 exec $term -e $editor ~/.config/i3/config
 bindsym $mod+Ctrl+F2 exec $term -e $editor ~/.config/polybar/config.ini
 
 # Networking
-bindsym $mod+Shift+b exec sh /home/cody/Scripts/cron/remote-backup.sh
+bindsym $mod+Shift+b exec /home/cody/Scripts/personal/remote-backup
 #bindsym $mod+Shift+k exec killall polybar
-bindsym $mod+Shift+n exec sh /home/cody/Scripts/personal/restart_network_services.sh
-bindsym $mod+Shift+p exec sh /home/cody/Scripts/personal/restart_proxy.sh
-bindsym $mod+Shift+v exec sh /home/cody/Scripts/personal/restart_vpn.sh
+bindsym $mod+Shift+n exec /home/cody/Scripts/personal/restart_network_services
+bindsym $mod+Shift+p exec /home/cody/Scripts/personal/restart_proxy
+bindsym $mod+Shift+v exec /home/cody/Scripts/personal/restart_vpn
 bindsym $mod+Ctrl+F11 exec $term -e bluetoothctl
 bindsym $mod+Ctrl+F12 exec $term -e nmtui
 

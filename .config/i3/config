@@ -263,3 +263,5 @@ exec xinput | awk '/Touch/ {print $6}' | sed 's/id=//g' | xargs -I {} xinput set
 exec aw-server
 exec aw-watcher-afk
 exec aw-watcher-window
+# Self-guardian notifications
+exec self-guardian-listener

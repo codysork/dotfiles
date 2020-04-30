@@ -2,11 +2,11 @@ export PATH=$PATH:~/.local/bin
 
 # Oh My zsh
 export ZSH="/home/cody/.oh-my-zsh"
-
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="powerlevel10k/powerlevel10k"
+
 CASE_SENSITIVE="true"
-plugins=(git python sudo)
+plugins=(git pip python sudo virtualenv)
 source $ZSH/oh-my-zsh.sh
 [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
 
@@ -16,6 +16,9 @@ export EDITOR='nvim'
 # Compilation flags
 export ARCHFLAGS="-arch x86_64"
 
+# Avoid dangerous commands
+export HISTIGNORE="rm*"
+
 # Colors
 autoload -U colors && colors
 
@@ -24,6 +27,7 @@ export CDPATH=$HOME
 
 # Useful Aliases
 alias ah="sh ~/Scripts/self-control/delayed-admin/admin-helper.sh"
+alias e2h="sudo self-guardian"
 alias h="history | tail"
 alias hg="history | grep"
 alias mv="mv -i"

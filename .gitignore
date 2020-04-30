@@ -39,7 +39,6 @@ Scripts/cron/*
 # Include some config files 
 !.config/
 !.config/compton.conf
-!.config/dunst/
 !.config/i3/
 !.config/i3/config
 !.config/newsboat/

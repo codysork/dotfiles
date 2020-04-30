@@ -40,8 +40,6 @@ Scripts/cron/*
 !.config/
 !.config/compton.conf
 !.config/dunst/
-!.config/dunst/
-!.config/dunst/dunstrc
 !.config/i3/
 !.config/i3/config
 !.config/newsboat/

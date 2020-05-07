@@ -1,0 +1,4 @@
+#!/bin/bash
+i3 floating toggle
+i3 resize set 880 1004
+i3 move absolute position center

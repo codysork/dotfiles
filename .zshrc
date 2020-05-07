@@ -10,8 +10,10 @@ plugins=(git pip python sudo virtualenv)
 source $ZSH/oh-my-zsh.sh
 [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
 
-# Preferred editor
+# Default applications
 export EDITOR='nvim'
+export VISUAL="nvim"
+export BROWSER="chromium"
 
 # Compilation flags
 export ARCHFLAGS="-arch x86_64"
@@ -42,4 +44,5 @@ alias todo="sh ~/Scripts/todo/todo.sh"
 # Custom variables only useful to me
 fan_model="GS65_8RF"
 pcc_server="syccuxas01.pcc.edu"
-cody_server="45.79.90.254"
+cody_public_server="45.79.90.254"
+cody_private_server="74.207.245.104"

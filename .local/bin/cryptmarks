@@ -1,0 +1,2 @@
+#!/bin/bash
+gpg -d ~/.h836/8213.7x7 | dmenu | xargs -I {} tor-browser {}

@@ -2,6 +2,7 @@
 set $mod Mod4
 set $term xst
 set $editor nvim
+set $browser firefox
 
 # Set colors from Xresources
 # Change 'color7' and 'color2' to whatever colors you want i3 to use
@@ -113,7 +114,7 @@ bindsym $mod+t layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
+#bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
@@ -208,20 +209,29 @@ client.background       $bg
 
 # My Custom Hotkeys
 # -----------------
+
+# i3 window movement
+# Overwrite default floating window behavior with letter paper proportions,
+# centered
+bindsym $mod+Shift+space exec ~/.local/bin/paper-center
+
+# Programs
 bindsym $mod+Ctrl+Escape exec sudo systemctl hibernate
+bindsym $mod+Ctrl+b exec $browser duckduckgo.com/html
 bindsym $mod+Ctrl+c exec $term -e calcurse
 bindsym $mod+Ctrl+e exec $term -e $editor 
-bindsym $mod+Ctrl+f exec firefox
+bindsym $mod+Ctrl+f exec ./.local/bin/buku-dmenu -a &
 bindsym $mod+Ctrl+k exec sudo msi-perkeyrgb -m "gs65" -s 110000
 bindsym $mod+Ctrl+m exec $term -e cmus
-bindsym $mod+Ctrl+n exec $term -e newsboat
-bindsym $mod+Ctrl+p exec $term -e castero
+bindsym $mod+Ctrl+n exec $term -e torsocks newsboat
+bindsym $mod+Ctrl+p exec $term -e torsocks castero
 bindsym $mod+Ctrl+r exec $term -e ranger ~/
+bindsym $mod+Ctrl+t exec ./.local/bin/buku-dmenu -t &
 bindsym $mod+Ctrl+u exec $term -e yay -Syu
 bindsym $mod+Ctrl+v exec $term -e $editor ~/@/@Inbox/new.temp
 bindsym $mod+Ctrl+w exec ./.local/bin/wal-scripts
-bindsym $mod+Ctrl+y exec $term -e straw-viewer -C --player=mpv
-bindsym $mod+Ctrl+z exec $term -e straw-viewer -C --player=mpv --channels
+bindsym $mod+Ctrl+y exec $term -e torsocks straw-viewer -C --player=mpv
+bindsym $mod+Ctrl+z exec $term -e torsocks straw-viewer -C --player=mpv --channels
 #bindsym $mod+Ctrl+minus exec xinput set-prop 18 "Device Enabled" 0
 #bindsym $mod+Ctrl+equals exec xinput set-prop 18 "Device Enabled" 1
 
@@ -236,11 +246,13 @@ bindsym $mod+Ctrl+F2 exec $term -e $editor ~/.config/polybar/config.ini
 # Networking
 bindsym $mod+Shift+b exec /home/cody/Scripts/personal/remote-backup
 #bindsym $mod+Shift+k exec killall polybar
-bindsym $mod+Shift+n exec /home/cody/Scripts/personal/restart_network_services
-bindsym $mod+Shift+p exec /home/cody/Scripts/personal/restart_proxy
 bindsym $mod+Shift+v exec /home/cody/Scripts/personal/restart_vpn
 bindsym $mod+Ctrl+F11 exec $term -e bluetoothctl
 bindsym $mod+Ctrl+F12 exec $term -e nmtui
+
+# Hardware
+bindsym $mod+Shift+o exec sudo isw -b off
+bindsym $mod+Shift+i exec sudo isw -b on
 
 # Startup
 #-----------------
@@ -263,5 +275,3 @@ exec xinput | awk '/Touch/ {print $6}' | sed 's/id=//g' | xargs -I {} xinput set
 exec aw-server
 exec aw-watcher-afk
 exec aw-watcher-window
-# Self-guardian notifications
-exec self-guardian-listener

@@ -8,9 +8,9 @@ if [ $curHour -ge 0 ] && [ $curHour -lt 5 ]; then
     wal -i ~/Pictures/Wallpapers/night --iterative
 elif [ $curHour -ge 5 ] && [ $curHour -lt 8 ]; then
     wal -i ~/Pictures/Wallpapers/morning --iterative
-elif [ $curHour -ge 8 ] && [ $curHour -lt 19 ]; then
+elif [ $curHour -ge 8 ] && [ $curHour -lt 20 ]; then
     wal -i ~/Pictures/Wallpapers/day --iterative
-elif [ $curHour -ge 19 ] && [ $curHour -lt 21 ]; then
+elif [ $curHour -ge 20 ] && [ $curHour -lt 21 ]; then
     wal -i ~/Pictures/Wallpapers/evening --iterative
 elif [ $curHour -ge 21 ] && [ $curHour -lt 24 ]; then
     wal -i ~/Pictures/Wallpapers/night --iterative

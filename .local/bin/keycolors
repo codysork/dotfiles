@@ -21,3 +21,4 @@ COLOR_HEX=$(
     grep "^[^.]color$[X_RESOURCES_COLOR_NUM][^0-9].*$" | 
     sed '$s/.*#//g' | tr '[:upper:]' '[:lower:]') 
 msi-perkeyrgb -m $MSI_KEYBOARD_MODEL -s $COLOR_HEX 
+razer-cli -c $COLOR_HEX

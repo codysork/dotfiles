@@ -19,6 +19,33 @@ Xft.rgba: rgb
 st.font: SauceCodePro Nerd Font Mono:pixelsize=14:antialias=true:autohint=true;
 st.alpha: 70
 
+URxvt.font: xft: SauceCodePro Nerd Font Mono:pixelsize=14:antialias=true:autohint=true;
+URxvt.letterSpace: 0
+URxvt.lineSpace: 0
+URxvt.geometry: 92x24
+URxvt.internalBorder: 24
+URxvt.cursorBlink: true
+URxvt.cursorUnderline: false
+URxvt.saveline: 2048
+URxvt.scrollBar: false
+URxvt.scrollBar_right: false
+URxvt.urgentOnBell: true
+URxvt.depth: 24
+URxvt.iso14755: false
+
+!! Copy Paste & Other Extensions
+URxvt.perl-ext-common: default,clipboard,url-select,keyboard-select
+URxvt.copyCommand: xclip -i -selection clipboard
+URxvt.pasteCommand: xclip -o -selection clipboard
+URxvt.keysym.M-c: perl:clipboard:copy
+URxvt.keysym.M-v: perl:clipboard:paste
+URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
+URxvt.keysym.M-Escape: perl:keyboard-select:activate
+URxvt.keysym.M-s: perl:keyboard-select:search
+URxvt.keysym.M-u: perl:url-select:select_next
+URxvt.urlLauncher: firefox
+URxvt.underlineURLs: true
+
 ! Colors
 
 *.boldMode: true
@@ -82,18 +109,18 @@ st.alpha: 70
 
 
 ! Dark
-*.foreground:   base05
-*.background:   base00
-*.cursorColor:  base05
-*.cursorColor2:  base05
-*.cursorUnderline: true
-*.cursorBlink: true
+!*.foreground:   base05
+!*.background:   base00
+!*.cursorColor:  base05
+!*.cursorColor2:  base05
+!*.cursorUnderline: true
+!*.cursorBlink: true
 
 ! Light
-!*.foreground:   base02
-!*.background:   base07
-!*.cursorColor:  base02
-!*.cursorColor2:  base02
+*.foreground:   base02
+*.background:   base07
+*.cursorColor:  base02
+*.cursorColor2:  base02
 
 *.color0:       base00
 *.color1:       base08

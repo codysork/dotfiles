@@ -1,4 +1,4 @@
-auto-reload no
+auto-reload yes
 browser firefox
 reload-time 60
 

@@ -2,7 +2,7 @@
 set $mod Mod4
 set $term urxvt
 set $editor nvim
-set $browser firefox
+set $browser firefox-esr
 
 # Set colors from Xresources
 # Change 'color7' and 'color2' to whatever colors you want i3 to use
@@ -237,7 +237,8 @@ bindsym $mod+Ctrl+z exec $term -e straw-viewer -C --player=mpv --channels
 
 # Common personal files
 bindsym $mod+Ctrl+1 exec $term -e $editor ~/Sync/Todo/todo.txt
-bindsym $mod+Ctrl+2 exec $term -e $editor ~/.config/newsboat/urls
+bindsym $mod+Ctrl+2 exec $term -e $editor ~/Sync/Todo/recur.txt
+bindsym $mod+Ctrl+3 exec $term -e $editor ~/.config/newsboat/urls
 
 # Common config files
 bindsym $mod+Ctrl+F1 exec $term -e $editor ~/.config/i3/config
@@ -264,6 +265,7 @@ exec --no-startup-id gnome-settings-daemon
 exec ./.local/bin/wal-scripts
 exec compton
 exec conky -c .conky/conkyrc1
+exec conky -c .conky/conkyrc2
 exec sh ~/.local/bin/keycolors
 exec_always --no-startup-id ~/.config/polybar/scripts/launch.sh &
 exec redshift
@@ -275,4 +277,4 @@ exec aw-watcher-afk
 exec aw-watcher-window
 
 # Peripheral Settings
-exec xinput | awk '/Touch/ {print $6}' | sed 's/id=//g' | xargs -I {} xinput set-prop {} "Device Enabled" 0
+# exec xinput | awk '/Touch/ {print $6}' | sed 's/id=//g' | xargs -I {} xinput set-prop {} "Device Enabled" 0

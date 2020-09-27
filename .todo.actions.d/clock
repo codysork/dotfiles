@@ -8,7 +8,7 @@
 
 #TODO_FILE="/path/to/todo.txt"
 #TODO_SH="/path/to/todo.sh"
-TODO_FILE="/home/cody/Sync/Todo/now/todo.txt"
+TODO_FILE="/home/cody/Sync/Todo/todo.txt"
 TODO_SH="/home/cody/Scripts/todo/todo.sh"
 
 #=========================================================

@@ -1,8 +1,9 @@
 # i3 config file (v1)
 set $mod Mod4
-set $term urxvt
+set $browser firefox
 set $editor nvim
-set $browser firefox-esr
+set $term urxvt
+set $youtube youtube-viewer
 
 # Set colors from Xresources
 # Change 'color7' and 'color2' to whatever colors you want i3 to use
@@ -230,8 +231,8 @@ bindsym $mod+Ctrl+t exec ./.local/bin/buku-dmenu -t &
 bindsym $mod+Ctrl+u exec $term -e yay -Syu
 bindsym $mod+Ctrl+v exec $term -e $editor ~/@/@Inbox/new.temp
 bindsym $mod+Ctrl+w exec ./.local/bin/wal-scripts
-bindsym $mod+Ctrl+y exec $term -e straw-viewer -C --player=mpv
-bindsym $mod+Ctrl+z exec $term -e straw-viewer -C --player=mpv --channels
+bindsym $mod+Ctrl+y exec $term -e $youtube -C --player=mpv
+bindsym $mod+Ctrl+z exec $term -e $youtube -C --player=mpv --channels
 #bindsym $mod+Ctrl+minus exec xinput set-prop 18 "Device Enabled" 0
 #bindsym $mod+Ctrl+equals exec xinput set-prop 18 "Device Enabled" 1
 
@@ -243,11 +244,15 @@ bindsym $mod+Ctrl+3 exec $term -e $editor ~/.config/newsboat/urls
 # Common config files
 bindsym $mod+Ctrl+F1 exec $term -e $editor ~/.config/i3/config
 bindsym $mod+Ctrl+F2 exec $term -e $editor ~/.config/polybar/config.ini
+bindsym $mod+Ctrl+F3 exec $term -e sudoedit /etc/hosts
 
 # Networking
 bindsym $mod+Shift+b exec /home/cody/Scripts/personal/remote-backup
 #bindsym $mod+Shift+k exec killall polybar
 bindsym $mod+Shift+v exec /home/cody/Scripts/personal/restart_vpn
+bindsym $mod+Ctrl+F8 exec sudo systemctl start openvpn-client@cody.service
+bindsym $mod+Ctrl+F9 exec sudo systemctl restart openvpn-client@cody.service
+bindsym $mod+Ctrl+F10 exec sudo systemctl stop openvpn-client@cody.service
 bindsym $mod+Ctrl+F11 exec $term -e bluetoothctl
 bindsym $mod+Ctrl+F12 exec $term -e nmtui
 

@@ -1,5 +1,5 @@
 auto-reload yes
-browser firefox
+browser firefox-esr
 reload-time 60
 
 # Colors

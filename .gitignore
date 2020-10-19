@@ -4,6 +4,9 @@
 # Exclude all home directories by default
 */ 
 
+# Junk
+.oh-my-zsh
+
 # Hidden file types
 *css
 *html
@@ -20,8 +23,6 @@
 
 # Exclude most firefox files and directories
 .mozilla/*
-.mozilla/firefox/*
-.mozilla/firefox/033x0mac*/*
 
 # Excluded scripts
 Scripts/__pycache__/*
@@ -60,13 +61,6 @@ Scripts/cron/*
 !.config/st/
 !.config/youtube-viewer/youtube-viewer.conf
 
-# Include custom firefox css
-!.mozilla/
-!.mozilla/firefox/
-!.mozilla/firefox/033x0mac*/
-!.mozilla/firefox/033x0mac*/chrome/
-!.mozilla/firefox/033x0mac*/chrome/*
-
 # Included todo.sh extensions
 !.todo.actions.d/
 
@@ -77,10 +71,3 @@ Scripts/cron/*
 !Scripts/
 !Scripts/todo/
 !Scripts/keycolors
-
-# Include screenshots and wallpapers
-!Pictures/
-!Pictures/Screenshots/
-!Pictures/Screenshots/*
-!Pictures/Wallpapers/
-!Pictures/Wallpapers/*

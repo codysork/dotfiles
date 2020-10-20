@@ -249,10 +249,9 @@ bindsym $mod+Ctrl+F3 exec $term -e sudoedit /etc/hosts
 # Networking
 bindsym $mod+Shift+b exec /home/cody/Scripts/personal/remote-backup
 #bindsym $mod+Shift+k exec killall polybar
-bindsym $mod+Shift+v exec /home/cody/Scripts/personal/restart_vpn
-bindsym $mod+Ctrl+F8 exec sudo systemctl start openvpn-client@cody.service
-bindsym $mod+Ctrl+F9 exec sudo systemctl restart openvpn-client@cody.service
-bindsym $mod+Ctrl+F10 exec sudo systemctl stop openvpn-client@cody.service
+bindsym $mod+Ctrl+F8 exec /home/cody/Scripts/personal/start_vpn
+bindsym $mod+Ctrl+F9 exec /home/cody/Scripts/personal/restart_vpn
+bindsym $mod+Ctrl+F10 exec /home/cody/Scripts/personal/stop_vpn
 bindsym $mod+Ctrl+F11 exec $term -e bluetoothctl
 bindsym $mod+Ctrl+F12 exec $term -e nmtui
 

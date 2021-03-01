@@ -3,7 +3,7 @@
 IFACE=$(ifconfig | grep tun | awk '{print $1}')
 
 if [ "$IFACE" = "tun0:" ]; then
-    echo "%{F#00AA00}%{F-}"
+    echo "%{F#00AA00}%{F#000000} VPN"
 else
-    echo -e "%{F#AA0000}%{F-}"
+    echo -e "%{F#AA0000}%{F#000000} VPN"
 fi

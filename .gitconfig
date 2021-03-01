@@ -1,6 +1,6 @@
 [user]
-	name = Kosmo Not
-	email = covidmutualaider@protonmail.com
+	name = Cody Sork
+	email = codysork@pm.me
 [branch]
 	autosteuprebase = always
 [color]
@@ -9,5 +9,6 @@
 	branch = auto
 [core]
 	editor = vim
+	autocrlf = input
 [merge]
 	tool = vimdiff

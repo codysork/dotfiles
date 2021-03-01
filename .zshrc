@@ -39,6 +39,7 @@ alias please="sudo" # add some humor to your shell
 alias rm='rm -i'
 
 # Aliases only useful to me
+alias t="reset; sh ~/Scripts/todo/todo.sh ls"
 alias todo="sh ~/Scripts/todo/todo.sh"
 
 # Custom variables only useful to me

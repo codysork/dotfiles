@@ -24,6 +24,9 @@
 # Exclude most firefox files and directories
 .mozilla/*
 
+# Exclute wallpapers, for copyright reasons
+Pictures/Wallpapers/*
+
 # Excluded scripts
 Scripts/__pycache__/*
 Scripts/cron/*

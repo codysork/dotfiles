@@ -41,7 +41,6 @@ ITEM=$2
 LINE=$(sed "$ITEM!d" "$TODO_FILE")
 LINE_NUM=$(grep -nr "$TASK" $TODO_FILE | head -n 1 | awk "{print $2;}")
 TASK=$(echo $LINE | sed -r "s/(\([A-Z]\))?([\@\+].*$)?//g")
-echo $TASK
 
 # Make sure task exists
 if [[ $TASK == "" ]]; then
@@ -77,7 +76,6 @@ elif [[ "$SECONDARY_CMD" == "out" ]]; then
         echo -e "No running clock."
     elif ! [[ "$ITEM" == "$LINE_NUM" ]]; then
         echo -e "No running clock for $TASK\b!"
-
     else 
         echo "Error! Usage:"
         usage

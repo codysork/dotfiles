@@ -3,26 +3,9 @@
 source "${HOME}/.cache/wal/colors.sh"
 curHour="$(date +'%H')"
    
-
-if [ $curHour -ge 0 ] && [ $curHour -lt 5 ]; then
-    wal -i ~/Pictures/Wallpapers/night --iterative
-elif [ $curHour -ge 5 ] && [ $curHour -lt 8 ]; then
-    wal -i ~/Pictures/Wallpapers/morning --iterative
-elif [ $curHour -ge 8 ] && [ $curHour -lt 20 ]; then
-    wal -i ~/Pictures/Wallpapers/day --iterative
-elif [ $curHour -ge 20 ] && [ $curHour -lt 21 ]; then
-    wal -i ~/Pictures/Wallpapers/evening --iterative
-elif [ $curHour -ge 21 ] && [ $curHour -lt 24 ]; then
-    wal -i ~/Pictures/Wallpapers/night --iterative
-else
-    notify-send $curHour
-    wal -i ~/Pictures/Wallpapers/day --iterative
-fi
-
+wal -i ~/Pictures/Wallpapers --iterative
 sh ~/.local/bin/dunstwal
 notify-send "Changing color scheme..."
-#spicetify update
 wal_steam -w
 sh ~/Scripts/wal-discord/wal-discord
 sh ~/.local/bin/keycolors
-

@@ -16,7 +16,7 @@
 # Excluded config files
 .config/*
 .config/i3/*
-.config/dunst/
+.config/dunst/dunstrc
 .config/newsboat/urls
 .config/spicetify/Backup/*
 .config/youtube-viewer/api.json

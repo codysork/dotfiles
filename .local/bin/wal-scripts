@@ -2,7 +2,10 @@
 
 source "${HOME}/.cache/wal/colors.sh"
 curHour="$(date +'%H')"
-   
+sunrise=6
+sunset=20
+
+
 wal -i ~/Pictures/Wallpapers --iterative
 sh ~/.local/bin/dunstwal
 notify-send "Changing color scheme..."

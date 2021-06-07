@@ -1,5 +1,5 @@
 auto-reload yes
-browser firefox
+browser brave
 notify-program notify-send
 reload-time 60
 show-read-feeds no

@@ -1,6 +1,6 @@
 # i3 config file (v1)
 set $mod Mod4
-set $browser chromium
+set $browser brave
 set $editor nvim
 set $term urxvt
 set $stream 1
@@ -24,7 +24,6 @@ new_window pixel 2
 new_float pixel 2
 
 gaps inner 8
-smart_gaps on
 
 bindsym $mod+u border none
 bindsym $mod+y border pixel 2

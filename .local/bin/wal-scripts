@@ -6,7 +6,7 @@ sunrise=6
 sunset=20
 
 
-wal -i ~/Pictures/Wallpapers --iterative
+styli.sh -p -w 1920 -h 1080 -s "christmas"
 sh ~/.local/bin/dunstwal
 notify-send "Changing color scheme..."
 wal_steam -w

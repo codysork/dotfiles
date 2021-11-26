@@ -1,5 +1,5 @@
 #!/bin/bash
 
-GPU=$(optimus-manager --status | grep "Current GPU" | sed 's/^.*: //g')
+GPU=$(optimus-manager --status | grep "Current GPU" | sed 's/^.*: //g'| cut -c -2)
 
-echo "Current GPU: $GPU"
+echo ${GPU}

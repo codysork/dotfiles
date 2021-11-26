@@ -40,7 +40,7 @@ URxvt.pasteCommand: xclip -o -selection clipboard
 URxvt.keysym.M-c: perl:clipboard:copy
 URxvt.keysym.M-v: perl:clipboard:paste
 URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
-URxvt.keysym.M-Escape: perl:keyboard-select:activate
+URxvt.eysym.M-Escape: perl:keyboard-select:activate
 URxvt.keysym.M-s: perl:keyboard-select:search
 URxvt.keysym.M-u: perl:url-select:select_next
 URxvt.urlLauncher: firefox
@@ -200,4 +200,4 @@ URxvt.underlineURLs: true
 !*color14:                 S_base1
 !*color15:                 S_base3
 
-!Xcursor.size: 32
+!Xcursor.size: 32k

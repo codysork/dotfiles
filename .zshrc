@@ -1,4 +1,5 @@
 export PATH=$PATH:~/.local/bin:~/.cargo/bin
+export PATH=$PATH:~/.local/bin:~/.node_modules
 
 # Oh My zsh
 export ZSH="/home/cody/.oh-my-zsh"

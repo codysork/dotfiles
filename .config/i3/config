@@ -1,6 +1,6 @@
 # i3 config file (v1)
 set $mod Mod4
-set $browser brave
+set $browser firefox
 set $editor nvim
 set $term urxvt
 set $stream 1
@@ -218,9 +218,9 @@ bindsym $mod+Shift+space exec ~/.local/bin/paper-center
 
 # Programs
 bindsym $mod+Ctrl+Escape exec sudo systemctl hibernate
-bindsym $mod+Ctrl+b exec $browser duckduckgo.com/html
+bindsym $mod+Ctrl+b exec $browser
 bindsym $mod+Ctrl+c exec $term -e calcurse
-bindsym $mod+Ctrl+e exec $term -e mutt
+bindsym $mod+Ctrl+e exec $term -e emacsclient .
 bindsym $mod+Ctrl+k exec sudo msi-perkeyrgb -m "gs65" -s 110000
 bindsym $mod+Ctrl+l exec ./.local/bin/buku-dmenu -a &
 bindsym $mod+Ctrl+m exec $term -e cmus
@@ -250,10 +250,10 @@ bindsym $mod+Ctrl+F3 exec $term -e sudoedit /etc/hosts
 # Networking
 bindsym $mod+Shift+b exec /home/cody/Scripts/personal/remote-backup
 #bindsym $mod+Shift+k exec killall polybar
-bindsym $mod+Ctrl+F7 exec /home/cody/.local/bin/restart_e2guardian
-bindsym $mod+Ctrl+F8 exec /home/cody/Scripts/personal/start_vpn
-bindsym $mod+Ctrl+F9 exec /home/cody/Scripts/personal/restart_vpn
-bindsym $mod+Ctrl+F10 exec /home/cody/Scripts/personal/stop_vpn
+#bindsym $mod+Ctrl+F7 exec /home/cody/.local/bin/restart_e2guardian
+#bindsym $mod+Ctrl+F8 exec /home/cody/Scripts/personal/start_vpn
+#bindsym $mod+Ctrl+F9 exec /home/cody/Scripts/personal/restart_vpn
+#bindsym $mod+Ctrl+F10 exec /home/cody/Scripts/personal/stop_vpn
 bindsym $mod+Ctrl+F11 exec $term -e bluetoothctl
 bindsym $mod+Ctrl+F12 exec $term -e nmtui
 
@@ -263,22 +263,21 @@ bindsym $mod+Shift+i exec sudo isw -b on
 
 # Startup
 #-----------------
+
 # Network Settings
 exec --no-startup-id nm-applet
-exec offlineimap
 
 # Desktop Settings
+#exec sudo apparmor_parser -r /var/lib/snapd/apparmor/profiles/*
+#exec accountable2you
 exec --no-startup-id gnome-settings-daemon
 exec ./.local/bin/wal-scripts
 exec compton
-exec conky -c .conky/conkyrc1
-exec conky -c .conky/conkyrc2
-exec conky -c .conky/conkyrc3
-exec conky -c .conky/conkyrc4
 exec sh ~/.local/bin/keycolors
 exec_always --no-startup-id ~/.config/polybar/scripts/launch.sh &
 exec redshift
-exec sudo mount /dev/sda /home/external # auto mount my external hard drive
+exec conky -c .conky/conkyrc1
+exec conky -c .conky/conkyrc2
 
 # Peripheral Settings
 # exec xinput | awk '/Touch/ {print $6}' | sed 's/id=//g' | xargs -I {} xinput set-prop {} "Device Enabled" 0

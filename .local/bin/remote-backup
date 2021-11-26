@@ -1,4 +1,4 @@
-!/bin/bash
+#!/bin/bash
 
 HOME="/home/cody"
 BACKUPS="$HOME/Backups $HOME/Code $HOME/Documents $HOME/Pictures $HOME/Scripts $HOME/.config $HOME/.ssh $HOME/Sync"

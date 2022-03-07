@@ -12,3 +12,6 @@
 	autocrlf = input
 [merge]
 	tool = vimdiff
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential

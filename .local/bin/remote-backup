@@ -1,10 +1,15 @@
 #!/bin/bash
 
-HOME="/home/cody"
-BACKUPS="$HOME/Backups $HOME/Code $HOME/Documents $HOME/Pictures $HOME/Scripts $HOME/.config $HOME/.ssh $HOME/Sync"
+HOME=/home/cody
+SERVER=45.79.73.187
+BACKUPS="$HOME/Backups $HOME/Code $HOME/Documents $HOME/Pictures $HOME/Scripts"
+BACKUPS+="$HOME/.config $HOME/.ssh $HOME/Sync $HOME/.todo.actions.d"
 PKGLIST_DIR="$HOME/Backups/pkglist"
 
 #=========================================================
 
 notify-send "Starting backup..."
-rsync -avz --progress $BACKUPS backup_server:~ && notify-send "Backup complete!"
+for backup in $BACKUPS
+do
+  rsync -avz --progress $backup $SERVER:~ && notify-send "Backup complete!"
+done

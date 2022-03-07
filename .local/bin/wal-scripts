@@ -1,14 +1,18 @@
 #!/bin/bash
 
 source "${HOME}/.cache/wal/colors.sh"
-curHour="$(date +'%H')"
-sunrise=6
-sunset=20
 
+#WALLPAPER_OLD_BIN="$(cat ${HOME}/.cache/styli.sh/wallpaper.jpg)"
+#WALLPAPER_NEW_BIN="$(cat ${HOME}/.cache/styli.sh/wallpaper.jpg)"
 
-styli.sh -p -w 1920 -h 1080 -s "christmas"
-sh ~/.local/bin/dunstwal
-notify-send "Changing color scheme..."
-wal_steam -w
-sh ~/Scripts/wal-discord/wal-discord
-sh ~/.local/bin/keycolors
+#while [ ${WALLPAPER_OLD_BIN} == ${WALLPAPER_NEW_BIN} ]
+#do
+styli.sh -p -w 1920 -h 1080 -s "nature"
+#WALLPAPER_NEW_BIN="$(cat {HOME}/.cache/styli.sh/wallpaper.jpg)"
+#done
+
+sh ${HOME}/.local/bin/dunstwal
+#wal_steam -w
+#sh ~/Scripts/wal-discord/wal-discord
+sh ${HOME}/.local/bin/keycolors
+sh ${HOME}/.config/polybar/scripts/launch.sh

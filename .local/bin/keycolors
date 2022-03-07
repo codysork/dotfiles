@@ -12,7 +12,7 @@
 # Supported models: ge6, ge73, ge75, gl63, gs63, gs65, gs75, gt63, gt75
 MSI_KEYBOARD_MODEL="gs65"
 # Supports any value from 0 to 15
-X_RESOURCES_COLOR_NUM=5
+X_RESOURCES_COLOR_NUM=2
 # End of Configuration
 
 
@@ -20,5 +20,12 @@ COLOR_HEX=$(
     xrdb -query | 
     grep "^[^.]color$[X_RESOURCES_COLOR_NUM][^0-9].*$" | 
     sed '$s/.*#//g' | tr '[:upper:]' '[:lower:]') 
-msi-perkeyrgb -m $MSI_KEYBOARD_MODEL -s $COLOR_HEX 
-razer-cli -c $COLOR_HEX
+
+if [[ $1 == "xmas" ]]; then
+    razer-cli -e spectrum
+    msi-perkeyrgb -m $MSI_KEYBOARD_MODEL -p roulette
+else
+    razer-cli -a
+    msi-perkeyrgb -m $MSI_KEYBOARD_MODEL -s $COLOR_HEX 
+fi
+

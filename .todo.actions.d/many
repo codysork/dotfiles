@@ -1,0 +1,209 @@
+#!/usr/bin/python3
+
+import sys
+import os
+import textwrap
+import subprocess
+from typing import Callable, Optional, List, Iterable, Tuple
+from functools import partial
+
+
+class EnvVariables(object):
+    def __init__(self,
+                 TODO_FULL_SH: str,
+                 TODO_FILE: str,
+                 TODO_MANY_SEARCH_FILE: Optional[str] = None,
+                 **ignored: str):
+        self.TODO_FULL_SH = TODO_FULL_SH
+        self.TODO_MANY_SEARCH_FILE = (TODO_MANY_SEARCH_FILE
+                                      if TODO_MANY_SEARCH_FILE is not None
+                                      else TODO_FILE)
+
+
+def format_usage(addon_name: str) -> str:
+    synopsis = '{} ACTION TERM...'.format(addon_name)
+    description = 'Run ACTION for multible different ITEM#s'
+    return '\n'.join([textwrap.indent(synopsis, 2*' '),
+                      textwrap.indent(description, 4*' '),
+                      ''])
+
+
+def parse_item_number_expression(text: str) -> List[int]:
+    '''
+    The simplest expression is a single number:
+
+      >>> parse_item_number_expression('5')
+      [5]
+
+    A range of numbers is created with a '-':
+
+      >>> parse_item_number_expression('1-5')
+      [1, 2, 3, 4, 5]
+
+    Multiple expression can be combinded with a ',':
+
+      >>> parse_item_number_expression('1,5')
+      [1, 5]
+      >>> parse_item_number_expression('1-7,10')
+      [1, 2, 3, 4, 5, 6, 7, 10]
+
+    The order of them doesn't matter; we them in a sorted order:
+
+      >>> parse_item_number_expression('10,1-7')
+      [1, 2, 3, 4, 5, 6, 7, 10]
+      >>> parse_item_number_expression('1-7,2')
+      [1, 2, 3, 4, 5, 6, 7]
+
+    An invalid input raises a ValueError
+
+      >>> parse_item_number_expression('not a item number expression')
+      ... # doctest: +ELLIPSIS
+      Traceback (most recent call last):
+        ...
+      ValueError: ...
+
+    '''
+
+    atoms = [x.split('-', 1) for x in text.split(',')]
+    return sorted(set([number
+                       for atom in atoms
+                       for number in ([int(atom[0])]
+                                      if len(atom) == 1
+                                      else list(range(int(atom[0]),
+                                                      int(atom[1])+1)))
+                       ]))
+
+
+parser_result = Optional[Tuple[slice, List[int]]]
+
+
+def item_number_expression_result(argv: List[str]) -> parser_result:
+    for i, a in enumerate(argv):
+        try:
+            item_list = parse_item_number_expression(a)
+            if len(item_list) > 1:
+                break
+        except ValueError:
+            pass
+    else:
+        return None
+    return (slice(i, i+1), item_list)
+
+
+def search_expression_result(env_vars: EnvVariables,
+                             argv: List[str]
+                             ) -> parser_result:
+    result = parse_search_expression(argv)
+    if result is None:
+        return None
+
+    todo_ls = subprocess.run([env_vars.TODO_FULL_SH, '-p',
+                              'lf', env_vars.TODO_MANY_SEARCH_FILE, result[1]],
+                             capture_output=True)
+    item_numbers = list(parse_ls_output(todo_ls.stdout.decode()))
+    return (result[0], item_numbers)
+
+
+def parse_ls_output(stdout: str) -> Iterable[int]:
+    """
+        >>> t = '''2 Schedule annual checkup +Health
+        ... 3 Outilne chapter 5 +Novel @Computer
+        ... 5 Download Todo.txt mobile app @Phone
+        ... 7 Plan backyard herb garden @Home
+        ... --
+        ... TODO: 7 of 7 tasks shown
+        ... '''
+        >>> list(parse_ls_output(t))
+        [2, 3, 5, 7]
+        >>> t = '''1 (B) Call Mom @Phone +Family
+        ... 5 (B) Download Todo.txt mobile app @Phone
+        ... --
+        ... TODO: 2 of 7 tasks shown
+        ... '''
+        >>> list(parse_ls_output(t))
+        [1, 5]
+    """
+    for line in stdout.splitlines():
+        try:
+            yield int(line.split(maxsplit=1)[0])
+        except ValueError:
+            break
+
+
+def parse_search_expression(argv: List[str]) -> Optional[Tuple[slice, str]]:
+    '''
+        >>> parse_search_expression([])
+        >>> parse_search_expression(['/abc/'])
+        (slice(0, 1, None), 'abc')
+        >>> parse_search_expression(['/abc'])
+        >>> parse_search_expression(['abc/'])
+        >>> parse_search_expression(['def', 'ghi/', '/abc'])
+        >>> parse_search_expression(['/abc', 'def', 'ghi/'])
+        (slice(0, 3, None), 'abc def ghi')
+        >>> parse_search_expression(['xyz', '/abc', 'def', 'ghi/'])
+        (slice(1, 4, None), 'abc def ghi')
+        >>> parse_search_expression(['/abc', 'def', 'ghi/', 'xyz'])
+        (slice(0, 3, None), 'abc def ghi')
+        >>> parse_search_expression(['x', '/abc', 'def', 'ghi/', 'yz'])
+        (slice(1, 4, None), 'abc def ghi')
+    '''
+    for i, text in enumerate(argv):
+        if text.startswith('/'):
+            break
+    else:
+        return None
+    for j, text in enumerate(argv[i:]):
+        if text.endswith('/'):
+            break
+    else:
+        return None
+    s = slice(i, i+j+1)
+    text = ' '.join(argv[s])
+    return (s, text[1:-1])
+
+
+def run_todotxt_command(argv: List[str],
+                        env_vars: EnvVariables,
+                        parsers: Iterable[Callable[[List[str]],
+                                                   parser_result]]
+                        ) -> None:
+    for p in parsers:
+        result = p(argv)
+        if result is None:
+            continue
+        replace, item_numbers = result
+        for item_number in reversed(item_numbers):
+            command = ([env_vars.TODO_FULL_SH]
+                       + argv[:replace.start]
+                       + [str(item_number)]
+                       + argv[replace.stop:])
+            subprocess.run(command)
+        break
+    else:
+        print('Error: No ITEM#-Expression found.')
+        return
+
+
+def main() -> None:
+    if len(sys.argv) == 2 and sys.argv[1] == '--test':
+        run_tests()
+        return
+    addon_name = os.path.basename(sys.argv[0])
+    if len(sys.argv) < 2 or sys.argv[1] == 'usage':
+        print(format_usage(addon_name))
+    else:
+        env_vars = EnvVariables(**os.environ)
+        run_todotxt_command(sys.argv[2:],
+                            env_vars,
+                            [item_number_expression_result,
+                             partial(search_expression_result, env_vars)])
+
+
+def run_tests() -> None:
+    import doctest
+    doctest.testmod()
+
+
+if __name__ == '__main__':
+    main()
+

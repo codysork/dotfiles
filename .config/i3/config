@@ -1,10 +1,9 @@
 # i3 config file (v1)
 set $mod Mod4
-set $browser firefox
+set $browser brave
 set $editor nvim
 set $term urxvt
 set $stream 1
-set $youtube youtube-viewer -C
 
 # Set colors from Xresources
 # Change 'color7' and 'color2' to whatever colors you want i3 to use
@@ -23,7 +22,7 @@ default_floating_border pixel 2
 new_window pixel 2
 new_float pixel 2
 
-gaps inner 8
+# gaps inner 8
 
 bindsym $mod+u border none
 bindsym $mod+y border pixel 2
@@ -32,11 +31,6 @@ bindsym $mod+n border normal
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 font pango:Source Code Pro Semibold 10
-#font pango:hack 13
-
-# This font is widely installed, provides lots of unicode glyphs, right-to-left
-# text rendering and scalability on retina/hidpi displays (thanks to pango).
-#font pango:hack 13
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
@@ -60,21 +54,12 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-# start a terminal
-bindsym $mod+Return exec $term
 
 # kill focused window
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-#bindsym $mod+d exec dmenu_run
-#set $menu --no-startup-id qdbus org.kde.krunner /App display
 set $menu rofi -show combi -hide-scrollbar -kb-row-select "Tab" -kb-row-tab ""
-bindsym $mod+d exec $menu
-# There also is the (new) i3-dmenu-desktop which only displays applications
-# shipping a .desktop file. It is a wrapper around dmenu, so you need that
-# installed.
-# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
 bindsym $mod+h focus left
@@ -115,16 +100,13 @@ bindsym $mod+t layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
-#bindsym $mod+Shift+space floating toggle
+bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
-
-# focus the child container
-#bindsym $mod+d focus child
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
@@ -212,30 +194,18 @@ client.background       $bg
 # -----------------
 
 # i3 window movement
-# Overwrite default floating window behavior with letter paper proportions,
-# centered
-bindsym $mod+Shift+space exec ~/.local/bin/paper-center
+bindsym $mod+Shift+p exec sh ~/.local/bin/paper-center
 
 # Programs
+bindsym $mod+Return exec $term
+bindsym $mod+d exec $menu
 bindsym $mod+Ctrl+Escape exec sudo systemctl hibernate
 bindsym $mod+Ctrl+b exec $browser
-bindsym $mod+Ctrl+c exec $term -e calcurse
-bindsym $mod+Ctrl+e exec $term -e emacsclient .
+bindsym $mod+Ctrl+e exec $term -e nvim
 bindsym $mod+Ctrl+k exec sudo msi-perkeyrgb -m "gs65" -s 110000
-bindsym $mod+Ctrl+l exec ./.local/bin/buku-dmenu -a &
-bindsym $mod+Ctrl+m exec $term -e cmus
-bindsym $mod+Ctrl+n exec $term -e newsboat
-bindsym $mod+Ctrl+p exec $term -e castero
 bindsym $mod+Ctrl+r exec $term -e ranger ~/
-bindsym $mod+Ctrl+t exec ./.local/bin/buku-dmenu -t &
-bindsym $mod+Ctrl+u exec $term -e yay -Syu
-bindsym $mod+Ctrl+v exec $term -e $editor ~/@/@Inbox/new.temp
+bindsym $mod+Ctrl+u exec $term -e sh ~/.local/bin/update
 bindsym $mod+Ctrl+w exec ./.local/bin/wal-scripts
-bindsym $mod+Ctrl+y exec $term -e $youtube
-bindsym $mod+Ctrl+z exec $term -e $youtube --channels
-
-#bindsym $mod+Ctrl+minus exec xinput set-prop 18 "Device Enabled" 0
-#bindsym $mod+Ctrl+equals exec xinput set-prop 18 "Device Enabled" 1
 
 # Common personal files
 bindsym $mod+Ctrl+1 exec $term -e $editor ~/Sync/Todo/todo.txt
@@ -249,15 +219,11 @@ bindsym $mod+Ctrl+F3 exec $term -e sudoedit /etc/hosts
 
 # Networking
 bindsym $mod+Shift+b exec /home/cody/Scripts/personal/remote-backup
-#bindsym $mod+Shift+k exec killall polybar
-#bindsym $mod+Ctrl+F7 exec /home/cody/.local/bin/restart_e2guardian
-#bindsym $mod+Ctrl+F8 exec /home/cody/Scripts/personal/start_vpn
-#bindsym $mod+Ctrl+F9 exec /home/cody/Scripts/personal/restart_vpn
-#bindsym $mod+Ctrl+F10 exec /home/cody/Scripts/personal/stop_vpn
+bindsym $mod+Shift+f exec pkill polybar
 bindsym $mod+Ctrl+F11 exec $term -e bluetoothctl
 bindsym $mod+Ctrl+F12 exec $term -e nmtui
 
-# Hardware
+#Hardware
 bindsym $mod+Shift+o exec sudo isw -b off
 bindsym $mod+Shift+i exec sudo isw -b on
 
@@ -266,18 +232,14 @@ bindsym $mod+Shift+i exec sudo isw -b on
 
 # Network Settings
 exec --no-startup-id nm-applet
+exec aw-server
+exec aw-watcher-afk
+exec aw-watcher-window
 
 # Desktop Settings
-#exec sudo apparmor_parser -r /var/lib/snapd/apparmor/profiles/*
-#exec accountable2you
 exec --no-startup-id gnome-settings-daemon
 exec ./.local/bin/wal-scripts
 exec compton
 exec sh ~/.local/bin/keycolors
-exec_always --no-startup-id ~/.config/polybar/scripts/launch.sh &
+exec_always --no-startup-id ~/.config/polybar/scripts/launch.sh
 exec redshift
-exec conky -c .conky/conkyrc1
-exec conky -c .conky/conkyrc2
-
-# Peripheral Settings
-# exec xinput | awk '/Touch/ {print $6}' | sed 's/id=//g' | xargs -I {} xinput set-prop {} "Device Enabled" 0

@@ -1,0 +1,10 @@
+#!/bin/bash
+
+TODO_SH="/home/cody/Scripts/todo/todo.sh"
+
+COMMAND=$(ls -1 ~/.todo.actions.d | dmenu)
+
+if [[ $COMMAND == 'stick' ]]; then
+   CONTACT=$(cat ~/.todo.actions.d/stick/contacts.txt | dmenu)
+   TASK=$(sh $TODO_SH ls | dmenu)
+fi

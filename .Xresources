@@ -16,9 +16,6 @@ Xft.hinting: 1
 Xft.antialias: 1
 Xft.rgba: rgb
 
-st.font: SauceCodePro Nerd Font Mono:pixelsize=14:antialias=true:autohint=true;
-st.alpha: 70
-
 URxvt.font: xft: SauceCodePro Nerd Font Mono:pixelsize=14:antialias=true:autohint=true;
 URxvt.letterSpace: 0
 URxvt.lineSpace: 0
@@ -34,7 +31,8 @@ URxvt.depth: 24
 URxvt.iso14755: false
 
 !! Copy Paste & Other Extensions
-URxvt.perl-ext-common: default,clipboard,url-select,keyboard-select
+URxvt.perl-lib:  /usr/lib/urxvt/perl/
+URxvt.perl-ext-common: default,clipboard,url-select,keyboard-select,matcher
 URxvt.copyCommand: xclip -i -selection clipboard
 URxvt.pasteCommand: xclip -o -selection clipboard
 URxvt.keysym.M-c: perl:clipboard:copy
@@ -43,8 +41,12 @@ URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
 URxvt.eysym.M-Escape: perl:keyboard-select:activate
 URxvt.keysym.M-s: perl:keyboard-select:search
 URxvt.keysym.M-u: perl:url-select:select_next
-URxvt.urlLauncher: firefox
+
+!! Links
 URxvt.underlineURLs: true
+URxvt.url-launcher: firefox
+URxvt.matcher.button: 1
+URxvt.matcher.pattern.1:   \\bwww\\.[\\w-]+\\.[\\w./?&@#-]*[\\w/-]
 
 ! Colors
 
@@ -70,6 +72,7 @@ URxvt.underlineURLs: true
 !#define base0D #3498DB
 !#define base0E #9B59B6
 !#define base0F #be643c
+
 
 ! Base16 Eighties
 #define base00 #2d2d2d

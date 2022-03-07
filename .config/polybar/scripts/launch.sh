@@ -1,9 +1,8 @@
 #!/bin/env sh
 
-pkill polybar
-pkill polybar
-
-sleep 1;
-
-#polybar --reload top -c ~/.config/polybar/config.ini &
-polybar --reload bottom -c ~/.config/polybar/config.ini &
+if [[ $(ps aux | pgrep polybar) ]]; then
+  killall polybar && killall polybar && \
+  polybar --reload bottom -c ~/.config/polybar/config.ini &
+else
+  polybar --reload bottom -c ~/.config/polybar/config.ini &
+fi

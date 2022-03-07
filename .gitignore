@@ -67,11 +67,9 @@ Scripts/cron/*
 
 # Included todo.sh extensions
 !.todo.actions.d/
+.todo.actions.d/remote
 
 # Include scripts
-!.local/
-!.local/bin/
-!.local/bin/*
 !Scripts/
 !Scripts/todo/
 !Scripts/keycolors

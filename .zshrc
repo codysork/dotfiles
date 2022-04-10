@@ -33,10 +33,6 @@ autoload -U colors && colors
 export CDPATH=$HOME
 
 # Useful Aliases
-alias ah="sh ~/Scripts/self-control/delayed-admin/admin-helper.sh"
-alias e2h="sudo self-guardian"
-alias h="history | tail"
-alias hg="history | grep"
 alias ls='exa'
 alias mv="mv -i"
 alias pip-upgrade="sudo pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 sudo pip install -U"
@@ -46,16 +42,15 @@ alias rm='rm -i'
 alias vim='nvim'
 
 # Aliases only useful to me
-alias t="reset; sh ~/Scripts/todo/todo.sh ls"
-alias todo="sh ~/Scripts/todo/todo.sh"
+alias t="reset; sh ~/00_Code/01_Scripts/todo/todo.sh ls"
+alias todo="sh ~/00_Code/01_Script/todo/todo.sh"
 
 # Custom variables only useful to me
 export fan_model="GS65_8RF"
-export pcc_server="cody.sork@syccuxas01.pcc.edu"
 export psu_server="csork@linux.cecs.pdx.edu"
 export lab_server="csork@cs202lab.cs.pdx.edu"
 export cody_public_server="45.79.90.254"
 export cody_private_server="74.207.245.104"
 
 # Requires jmp script
-source "/home/cody/Scripts/Jmp/jmp_wrapper.sh"
+#source "/home/cody/30-39 Code/31 Scripts/31.02 jmp/"

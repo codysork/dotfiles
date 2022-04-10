@@ -1,18 +1,6 @@
 #!/bin/bash
 
 source "${HOME}/.cache/wal/colors.sh"
-
-#WALLPAPER_OLD_BIN="$(cat ${HOME}/.cache/styli.sh/wallpaper.jpg)"
-#WALLPAPER_NEW_BIN="$(cat ${HOME}/.cache/styli.sh/wallpaper.jpg)"
-
-#while [ ${WALLPAPER_OLD_BIN} == ${WALLPAPER_NEW_BIN} ]
-#do
-styli.sh -p -w 1920 -h 1080 -s "nature"
-#WALLPAPER_NEW_BIN="$(cat {HOME}/.cache/styli.sh/wallpaper.jpg)"
-#done
-
+styli.sh -p -w 1920 -h 1080 -s "oregon"
 sh ${HOME}/.local/bin/dunstwal
-#wal_steam -w
-#sh ~/Scripts/wal-discord/wal-discord
 sh ${HOME}/.local/bin/keycolors
-sh ${HOME}/.config/polybar/scripts/launch.sh

@@ -17,10 +17,11 @@ set_from_resource $accent i3wm.color5 #f0f0f0
 
 # Window Style
 hide_edge_borders smart
-default_border pixel 2
-default_floating_border pixel 2
-new_window pixel 2
-new_float pixel 2
+default_border none
+default_floating_border none
+#gaps inner 38
+#gaps outer 38
+
 
 bindsym $mod+u border none
 bindsym $mod+y border pixel 2
@@ -199,6 +200,7 @@ bindsym $mod+Ctrl+Escape exec sudo systemctl hibernate
 bindsym $mod+Ctrl+b exec $browser
 bindsym $mod+Ctrl+e exec $term -e nvim
 bindsym $mod+Ctrl+k exec sudo msi-perkeyrgb -m "gs65" -s 110000
+bindsym $mod+Ctrl+o exec obsidian
 bindsym $mod+Ctrl+r exec $term -e ranger ~/
 bindsym $mod+Ctrl+u exec $term -e sh ~/.local/bin/update
 bindsym $mod+Ctrl+w exec ./.local/bin/wal-scripts

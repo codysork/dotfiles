@@ -230,9 +230,6 @@ bindsym $mod+Shift+i exec sudo isw -b on
 
 # Network Settings
 exec --no-startup-id nm-applet
-exec aw-server
-exec aw-watcher-afk
-exec aw-watcher-window
 
 # Desktop Settings
 exec --no-startup-id gnome-settings-daemon

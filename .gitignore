@@ -6,6 +6,9 @@
 
 # Junk
 .oh-my-zsh
+brave-*
+wget-log
+
 
 # Hidden file types
 *css

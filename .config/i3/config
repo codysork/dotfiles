@@ -211,9 +211,11 @@ exec systemctl --user start syncthing.service
 # Desktop Settings
 exec --no-startup-id gnome-settings-daemon
 exec ./.local/bin/wal-scripts
-exec compton
 exec sh ~/.local/bin/keycolors
+
+# Startup Programs
 exec_always --no-startup-id ~/.config/polybar/scripts/launch.sh
+exec compton
 exec redshift
 exec kdeconnect-indicator
 exec espanso start

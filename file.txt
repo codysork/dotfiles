@@ -1,0 +1,3 @@
+Jun 08 17:13:38 freedom pulseaudio[2864]: Can't cancel echo between a sink and its monitor
+Jun 08 17:13:38 freedom pulseaudio[2864]: Failed to load module "module-echo-cancel" (argument: "use_master_format=1 aec_method=webrtc aec_args="beamforming=1 mic_geometry=-0.025,0,0,0.025,0,0""): initialization failed.
+Jun 08 17:13:38 freedom pulseaudio[2864]: Source alsa_input.pci-0000_00_1f.3.analog-stereo.echo-cancel does not exist.

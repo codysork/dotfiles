@@ -1,6 +1,6 @@
 [user]
 	name = Cody Sork
-	email = codysork@pm.me
+	email = codysork@gmail.com
 [branch]
 	autosteuprebase = always
 [color]
@@ -15,3 +15,8 @@
 [credential "https://github.com"]
 	helper = 
 	helper = !/usr/bin/gh auth git-credential
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

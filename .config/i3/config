@@ -198,8 +198,15 @@ bindsym $mod+Shift+i exec sudo isw -b on
 # Startup
 #-----------------
 
+# Mount external harddrive if one exists
+exec lsblk | grep sd | awk '{print $1;}' | xargs -I {} sudo mount /dev/{} /home/external
+# Disable touchpad
+exec xinput | grep Touch | awk '{print $6;}' | awk -F '=' '{print $2;}' | xargs -I {} xinput --disable {}
+
+
 # Network Settings
 exec sudo eddie-ui
+exec systemctl --user start syncthing.service
 
 # Desktop Settings
 exec --no-startup-id gnome-settings-daemon
@@ -208,3 +215,5 @@ exec compton
 exec sh ~/.local/bin/keycolors
 exec_always --no-startup-id ~/.config/polybar/scripts/launch.sh
 exec redshift
+exec kdeconnect-indicator
+exec espanso start

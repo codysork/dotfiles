@@ -1,17 +1,19 @@
 # Ignore everything by default
 /*
 
-# Track
-## Directories
-!/.Xresources
-!/.zshrc
-!/.profile
+## Track directories
+!/.config/
 !/.config/i3
 !/.config/nvim
 !/.config/polybar
 !/.config/rofi
-## Files
+
+## Track files
 !.LICENSE
 !.gitignore
-!/.config/i3/config
-!/.config/
+!/.Xresources
+!/.zshrc
+
+## Ignore all other directories in .config
+.config/*
+

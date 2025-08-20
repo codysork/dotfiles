@@ -222,11 +222,7 @@ bindsym $mod+Shift+f exec pkill polybar
 # Keyboard Settings
 exec setxkbmap -option compose:rctrl
 
-# Network Settings
-# exec --no-startup-id nm-applet
-
 # Desktop Settings
-# exec --no-startup-id gnome-settings-daemon
 exec styli.sh -p -w 1920 -h 1080 -d ~/Images/Wallpapers/
 exec picom
 exec_always --no-startup-id ~/.config/polybar/scripts/launch.sh

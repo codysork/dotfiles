@@ -5,6 +5,7 @@
 !.gitignore
 
 # Track
+## Directories
 !/.Xresources
 !/.zshrc
 !/.profile
@@ -12,4 +13,6 @@
 !/.config/nvim
 !/.config/polybar
 !/.config/rofi
-
+## Files
+!/.config/i3/config
+!/.config/

@@ -1,8 +1,5 @@
-# Ignore everything
+# Ignore everything by default
 /*
-
-# Include
-!.gitignore
 
 # Track
 ## Directories
@@ -14,5 +11,7 @@
 !/.config/polybar
 !/.config/rofi
 ## Files
+!.LICENSE
+!.gitignore
 !/.config/i3/config
 !/.config/

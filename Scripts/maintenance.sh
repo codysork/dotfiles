@@ -24,8 +24,12 @@ SYSTEM_LOG_FILES=(
 CONFIG_MANAGER="${CONFIG_MANAGER:-/usr/bin/etckeeper commit -m 'Automated backup'}"
 PACKAGE_MANGER="pacman"
 LIST_PACKAGES_COMMAND="${LIST_PACKAGES_COMMAND:-$PACKAGE_MANGER -Qq}"
+UPDATE_PACKAGES_COMMAND="${yay -Syu}"
 PKGLIST_FILE="${PKGLIST_FILE:-$SCRIPT_DIR/pkglist.txt}"
 REMOTE_BACKUP_SCRIPT="${REMOTE_BACKUP_SCRIPT:-/home/cody/Scripts/backup.sh}"
+
+# Filesystem Maintenance Settings
+MAX_CACHE_SIZE="10G"
 
 # System Update Settings
 
@@ -205,8 +209,19 @@ timeshift_snapshot() {
     fi
 }
 
-# System Updates ---------------------------------------------------------------
-
+clear_cache() {
+    # Check disk space usage of cache
+    local cache_usage=$(df -h /var/cache | grep -i "cache" | awk '{print $5}' | sed 's/%//')
+    
+    if [ "$cache_usage" -gt "$MAX_CACHE_SIZE" ]; then
+        echo "INFO: Clearing cache..."
+        echo "INFO: Cache usage: $cache_usage"
+        echo "INFO: Max cache size: $MAX_CACHE_SIZE"
+        sudo rm -rf /var/cache/*
+    else
+        echo "INFO: Cache usage: $cache_usage"
+    fi
+}
 
 #------------------------------------------------------------------------------#
 #                               # Main Logic #                                 #
@@ -228,8 +243,11 @@ echo "INFO: Running backups..."
 run_config_manager
 list_packages
 remote_backup
-# TODO: dotfile_backup
 timeshift_snapshot
+clear_cache
 echo "INFO: Backups completed."
 
 # System Updates
+echo "INFO: Updating packages..."
+$UPDATE_PACKAGES_COMMAND
+echo "INFO: Packages updated."

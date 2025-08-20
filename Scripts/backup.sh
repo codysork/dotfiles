@@ -4,7 +4,7 @@ export PATH=$PATH:/usr/local/bin:/usr/bin:/bin
 # Configuration
 USER="cody"
 BACKUP_DIR="/home/cody/Backups"
-FILES_TO_ARCHIVE="/home/cody/Calibre /home/cody/Documents /home/cody/Downloads /home/cody/Images /home/cody/Sync"
+FILES_TO_ARCHIVE=(/home/cody/Calibre /home/cody/Documents /home/cody/Downloads /home/cody/Images /home/cody/Sync)
 ARCHIVE="$BACKUP_DIR/$USER-backup-$(date +%Y-%m-%d).tar.gz"
 
 # Command-line arguments
@@ -30,13 +30,14 @@ while (( "$#" )); do
 done
 
 # Create tarball in Backups directory
-IFS=' ' read -r -a FILES_ARRAY <<< "$FILES_TO_ARCHIVE"
 if [ "$VERBOSE" -eq 1 ]; then
     echo "Compressing backup directory..."
-    tar -czvf "$ARCHIVE" "${FILES_ARRAY[@]}"
+    tar -czvf "$ARCHIVE" "${FILES_TO_ARCHIVE[@]}"
 else
-    tar -czvf "$ARCHIVE" "${FILES_ARRAY[@]}"
+    tar -czvf "$ARCHIVE" "${FILES_TO_ARCHIVE[@]}"
 fi
 
 # rclone sync the compressed backup directory
 rclone sync "$ARCHIVE" gdrive:/Backups/ --quiet --log-file /dev/null
+# Remove the archive file
+rm "$ARCHIVE"

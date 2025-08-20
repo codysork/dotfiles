@@ -1,0 +1,7 @@
+configuration {               
+  modes: "combi";
+  combi-modes: "window,drun";
+  font: "Source Code Pro Semibold 10";
+}
+
+@theme "spotlight-dark"

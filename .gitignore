@@ -1,0 +1,15 @@
+# Ignore everything
+/*
+
+# Include
+!.gitignore
+
+# Track
+!/.Xresources
+!/.zshrc
+!/.profile
+!/.config/i3
+!/.config/nvim
+!/.config/polybar
+!/.config/rofi
+

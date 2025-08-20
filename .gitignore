@@ -7,6 +7,7 @@
 !/.config/nvim
 !/.config/polybar
 !/.config/rofi
+!/Scripts
 
 ## Track files
 !.LICENSE
@@ -17,3 +18,10 @@
 ## Ignore all other directories in .config
 .config/*
 
+## Ignore all other directories in SCripts
+Scripts/*
+
+## Ignore all other files in Scripts
+*.log
+*.txt
+*.json

@@ -16,6 +16,8 @@
 !/.todo.cfg
 !/.Xresources
 !/.zshrc
+!README.md
+!LICENSE
 
 ## Ignore all other directories in SCripts
 Scripts/*

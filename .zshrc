@@ -74,8 +74,12 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
+# Important files
+export TODO_FILE="/home/cody/Sync/Todo/todo.txt"
+
 # Aliases
-alias todo='todo.sh'
+alias todo='todo.sh -d ~/.todo.cfg'
+alias todoedit="nvim ${TODO_FILE}"
 alias vim='nvim'
 
 eval $(thefuck --alias)

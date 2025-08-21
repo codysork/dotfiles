@@ -7,16 +7,15 @@
 !/.config/nvim
 !/.config/polybar
 !/.config/rofi
+!/.todo.actions.d
 !/Scripts
 
 ## Track files
 !.LICENSE
 !.gitignore
+!/.todo.cfg
 !/.Xresources
 !/.zshrc
-
-## Ignore all other directories in .config
-.config/*
 
 ## Ignore all other directories in SCripts
 Scripts/*

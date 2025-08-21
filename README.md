@@ -1,6 +1,6 @@
 # Codys' Dotfiles
 
-These dotfiles were set up on Arch Linux, so using any Arch-based Linux distro such as Arch or Manjaro should allow you to make use of it. The distro you use is not important, but the directions here will assume you are using Arch, or at least it's package manager — pacman.
+These dotfiles were set up on Arch Linux, so using any Arch-based Linux distro such as Arch or Manjaro should allow you to make use of it. The distro you use is not important, but the directions here will assume you are using Arch, or at least its package manager — pacman.
 
 ## Packages Required
 

@@ -22,6 +22,8 @@ pacman -S i3 polybar rofi rxvt-unicode
 - [zsh](https://www.zsh.org/)
 - [todotxt](http://todotxt.org/)
 
+### Installation
+
 ```
 pacman -S neovim zsh
 yay -S todotxt

@@ -75,6 +75,7 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # Aliases
-alias vim=nvim
+alias todo='todo.sh'
+alias vim='nvim'
 
 eval $(thefuck --alias)

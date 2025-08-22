@@ -215,7 +215,6 @@ bindsym $mod+Ctrl+F3 exec $term -e sudoedit /etc/hosts
 # Misc
 bindsym $mod+Shift+f exec pkill polybar
 
-
 # Startup
 #-----------------
 
@@ -226,4 +225,5 @@ exec setxkbmap -option compose:rctrl
 exec styli.sh -p -w 1920 -h 1080 -d ~/Images/Wallpapers/
 exec picom
 exec_always --no-startup-id ~/.config/polybar/scripts/launch.sh
+exec conky
 exec redshift

@@ -202,7 +202,7 @@ bindsym $mod+Ctrl+b exec $browser
 bindsym $mod+Ctrl+e exec emote
 bindsym $mod+Ctrl+r exec $term -e ranger ~/
 # bindsym $mod+Ctrl+u exec $term -e sh ~/.local/bin/update
-bindsym $mod+Ctrl+w exec ./.local/bin/wal-scripts
+bindsym $mod+Ctrl+w exec styli.sh -p -w 1920 -h 1080 -r wallpapers
 
 # Common config files
 bindsym $mod+Ctrl+F1 exec $term -e $editor ~/.config/i3/config
@@ -222,8 +222,8 @@ bindsym $mod+Shift+f exec pkill polybar
 exec setxkbmap -option compose:rctrl
 
 # Desktop Settings
-exec styli.sh -p -w 1920 -h 1080 -d ~/Images/Wallpapers/
+exec styli.sh -p -w 1920 -h 1080 -r wallpapers
 exec picom
 exec_always --no-startup-id ~/.config/polybar/scripts/launch.sh
-exec conky
+# exec conky
 exec redshift

@@ -4,7 +4,7 @@
 
 # Configuration
 # Set your backups directory here
-BACKUP_DIR="$/Backups" 
+BACKUP_DIR="$HOME/Backups" 
 # Set your files and directories to archive here
 TO_ARCHIVE=($HOME/Calibre $HOME/Documents $HOME/Downloads $HOME/Images $HOME/Sync)
 ARCHIVE="$BACKUP_DIR/$USER-backup-$(date +%Y-%m-%d).tar.gz"

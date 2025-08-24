@@ -1,10 +1,12 @@
-#!/bin/zsh
-export PATH=$PATH:/usr/local/bin:/usr/bin:/bin
+#!/bin/bash
+# @author: Cody Sork <codysork@pm.me>
+# @modified: 2025-08-23
 
 # Configuration
-USER="cody"
-BACKUP_DIR="/home/cody/Backups"
-FILES_TO_ARCHIVE=(/home/cody/Calibre /home/cody/Documents /home/cody/Downloads /home/cody/Images /home/cody/Sync)
+# Set your backups directory here
+BACKUP_DIR="$/Backups" 
+# Set your files and directories to archive here
+TO_ARCHIVE=($HOME/Calibre $HOME/Documents $HOME/Downloads $HOME/Images $HOME/Sync)
 ARCHIVE="$BACKUP_DIR/$USER-backup-$(date +%Y-%m-%d).tar.gz"
 
 # Command-line arguments
@@ -32,9 +34,9 @@ done
 # Create tarball in Backups directory
 if [ "$VERBOSE" -eq 1 ]; then
     echo "Compressing backup directory..."
-    tar -czvf "$ARCHIVE" "${FILES_TO_ARCHIVE[@]}"
+    tar -czvf "$ARCHIVE" "${TO_ARCHIVE[@]}"
 else
-    tar -czvf "$ARCHIVE" "${FILES_TO_ARCHIVE[@]}"
+    tar -czvf "$ARCHIVE" "${TO_ARCHIVE[@]}"
 fi
 
 # rclone sync the compressed backup directory

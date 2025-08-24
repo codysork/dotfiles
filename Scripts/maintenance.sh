@@ -1,16 +1,15 @@
 #!/bin/bash
-# system-maintenance.sh
-# Automated system maintenance script using AI shell assistant
-# Created by Cody Sork <codysork@gmail.com>
-# Last Modified: 2023-04-13
+# maintenance.sh
+# @author: Cody Sork <codysork@pm.me>
+# @modfied: 2025-08-23
 
 #------------------------------------------------------------------------------#
 #                               # Settings #                                   #
 #------------------------------------------------------------------------------#
 
 # General Settings
-SCRIPT_DIR="${SCRIPT_DIR:-/home/cody/Scripts/sysmaintain}"
-SCRIPT_LOG_FILE="${SCRIPT_LOG_FILE:-$SCRIPT_DIR/sysmaintain.log}"
+LOG_DIR="${LOG_DIR:$HOME/Scripts/logs}"
+SCRIPT_LOG_FILE="${SCRIPT_LOG_FILE:-$LOG_DIR/sysmaintain.log}"
 
 # Log Checking Settings
 SYSTEM_LOG_FILES=(
@@ -25,7 +24,7 @@ CONFIG_MANAGER="${CONFIG_MANAGER:-/usr/bin/etckeeper commit -m 'Automated backup
 PACKAGE_MANGER="pacman"
 LIST_PACKAGES_COMMAND="${LIST_PACKAGES_COMMAND:-$PACKAGE_MANGER -Qq}"
 UPDATE_PACKAGES_COMMAND="${yay -Syu}"
-PKGLIST_FILE="${PKGLIST_FILE:-$SCRIPT_DIR/pkglist.txt}"
+PKGLIST_FILE="${PKGLIST_FILE:-$LOG_DIR/pkglist.txt}"
 REMOTE_BACKUP_SCRIPT="${REMOTE_BACKUP_SCRIPT:-/home/cody/Scripts/backup.sh}"
 
 # Filesystem Maintenance Settings
@@ -88,9 +87,9 @@ setup_script_directory() {
     set -e
 
     # Ensure that the script directory exists
-    if [ ! -d "$SCRIPT_DIR" ]; then
+    if [ ! -d "$LOG_DIR" ]; then
         echo "INFO: Creating script directory..."
-        mkdir -p "$SCRIPT_DIR"
+        mkdir -p "$LOG_DIR"
         echo "INFO: Script directory created."
     fi
 }

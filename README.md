@@ -27,7 +27,7 @@ yay -S syli.sh-git
 ### Packages Used in Conky (WIP)
 
 - [conky](https://github.com/brndnmtthws/conky)
-- [gcalci](https://github.com/insanum/gcalcli
+- [gcalci](https://github.com/insanum/gcalcli)
 - [todotxt](http://todotxt.org/)
 
 #### Installation

@@ -75,7 +75,8 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # Important files
-export TODO_FILE="/home/cody/Sync/Todo/todo.txt"
+# Set your todo file here
+export TODO_FILE="$HOME/Sync/Todo/todo.txt"
 
 # Aliases
 alias todo='todo.sh -d ~/.todo.cfg'

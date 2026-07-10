@@ -1,0 +1,82 @@
+global:
+  Left:
+    2: mpv seek -5 ;; echo mpv Rewinded 5 seconds
+    3: back ;; echo mpv Unskipped
+  'f':
+    2: run ${browser} '${url}'
+  Right:
+    3: next ;; echo mpv Skipped
+    2: mpv seek 5 ;; echo mpv Fast forwarded 5 seconds
+  'y':
+    0: cp ${url}
+  ' ':
+    0: tpause ;; echo mpv Player pause toggled
+  'c':
+    2: cp ${url}
+search:
+  'A':
+    1: parrun ${terminal-emulator} mpv '${hover-url}' --no-video --loop-playlist=inf --shuffle
+  'p':
+    2: parrun mpv '${hover-url}'
+  'a':
+    2: parrun ${terminal-emulator} mpv '${hover-url}' --no-video
+popular:
+  'p':
+    2: parrun mpv '${hover-url}'
+  'a':
+    2: parrun ${terminal-emulator} mpv '${hover-url}' --no-video
+  'A':
+    1: parrun ${terminal-emulator} mpv '${hover-url}' --no-video --loop-playlist=inf --shuffle
+trending:
+  'a':
+    2: parrun ${terminal-emulator} mpv '${hover-url}' --no-video
+  'A':
+    1: parrun ${terminal-emulator} mpv '${hover-url}' --no-video --loop-playlist=inf --shuffle
+  'p':
+    2: parrun mpv '${hover-url}'
+video: {}
+playlist:
+  'p':
+    2: parrun mpv '${hover-url}'
+  'a':
+    2: parrun ${terminal-emulator} mpv '${hover-url}' --no-video
+  'A':
+    1: parrun ${terminal-emulator} mpv '${hover-url}' --no-video --loop-playlist=inf --shuffle
+channel_main: {}
+channel_videos:
+  'p':
+    2: parrun mpv '${hover-url}'
+  'A':
+    1: parrun ${terminal-emulator} mpv '${hover-url}' --no-video --loop-playlist=inf --shuffle
+  'a':
+    2: parrun ${terminal-emulator} mpv '${hover-url}' --no-video
+channel_playlists:
+  'p':
+    2: parrun mpv '${hover-url}'
+  'A':
+    1: parrun ${terminal-emulator} mpv '${hover-url}' --no-video --loop-playlist=inf --shuffle
+  'a':
+    2: parrun ${terminal-emulator} mpv '${hover-url}' --no-video
+watchhistory:
+  'p':
+    2: parrun mpv '${hover-url}'
+  'a':
+    2: parrun ${terminal-emulator} mpv '${hover-url}' --no-video
+  'A':
+    1: parrun ${terminal-emulator} mpv '${hover-url}' --no-video --loop-playlist=inf --shuffle
+feed:
+  'A':
+    1: parrun ${terminal-emulator} mpv '${hover-channel-url}/videos' --no-video --loop-playlist=inf --shuffle
+  'a':
+    2: parrun ${terminal-emulator} mpv '${hover-video-url}' --no-video
+  'P':
+    1: parrun ${terminal-emulator} mpv '${hover-channel-url}/videos' --no-video --loop-playlist=inf --shuffle
+  'p':
+    2: parrun mpv '${hover-video-url}'
+library:
+  'a':
+    2: parrun ${terminal-emulator} mpv '${hover-url}' --no-video
+  'p':
+    2: parrun mpv '${hover-url}'
+  'A':
+    1: parrun ${terminal-emulator} mpv '${hover-url}' --no-video --loop-playlist=inf --shuffle

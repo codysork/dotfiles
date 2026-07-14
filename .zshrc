@@ -23,6 +23,9 @@ source $ZSH/oh-my-zsh.sh
 # Defaults
 export EDITOR='nvim'
 
+# Aliases
+alias todo='todo.sh'
+
 #--------------------#
 # Ending Boilerplate #
 #--------------------#

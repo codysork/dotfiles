@@ -1,13 +1,7 @@
 #!/bin/sh
 
-prefix="/usr"
-exec_prefix="${prefix}"
 xrdb="xrdb"
 xinitdir="/etc/X11/xinit"
-xclock="xclock"
-xterm="st"
-twm="twm"
-xmodmap="xmodmap"
 
 userresources="$HOME/.Xresources"
 usermodmap="$HOME/.Xmodmap"

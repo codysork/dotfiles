@@ -24,10 +24,14 @@ source $ZSH/oh-my-zsh.sh
 export EDITOR='nvim'
 
 # Aliases
+## Shorteners
 alias todo='todo.sh'
+## Utilities
+alias ntask='todo.sh -p lsp | head -n 1 | xargs -I {} notify-send {}'
 
 #--------------------#
 # Ending Boilerplate #
 #--------------------#
 
+eval "$(thefuck --alias fuck)"
 eval "$(zoxide init zsh)"

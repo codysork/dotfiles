@@ -41,5 +41,10 @@ if [ -d "$xinitdir"/xinitrc.d ] ; then
 	unset f
 fi
 
+# Start programs
+exec picom --config ~/.config/picom.conf &
+exec redshift-gtk &
+exec dunst &
+
 # Start the window manager
 exec dwm

@@ -25,14 +25,8 @@ color-list-section-selected	white default bold
 color-list-section-unread	yellow default
 color-list-section-failed	red default
 
-# That's how you bind a regular action.
-bind ^P mark-unread-all
-
-# Command binding for opening links with feh image viewer.
+# Bindings
+bind b exec brave "%l" &
 bind f exec feh "%l"
-
-# This will launch mpv in the background.
 bind m exec mpv --no-terminal "%l" &
-
-# This will launch mpv interactively.
 bind M exec mpv "%l"

@@ -1,0 +1,38 @@
+# This is an example of valid config file for Newsraft.
+# Note that config file is not required for Newsraft to work!
+# It's used only for overriding default settings and expanding functionality.
+
+# Lines with # character at the beginning are comments - they are ignored.
+
+# Here we set some settings.
+scrolloff 5
+feeds-menu-paramount-explore true
+
+# Colors
+color-status	green default bold
+color-status-info	cyan default bold
+color-status-fail	red default bold
+color-list-item	default default
+color-list-item-selected	white default bold
+color-list-item-unread	yellow default
+color-list-item-important	magenta default
+color-list-feed	default default
+color-list-feed-selected	white default bold
+color-list-feed-unread	yellow default
+color-list-feed-failed	red default
+color-list-section	default default
+color-list-section-selected	white default bold
+color-list-section-unread	yellow default
+color-list-section-failed	red default
+
+# That's how you bind a regular action.
+bind ^P mark-unread-all
+
+# Command binding for opening links with feh image viewer.
+bind f exec feh "%l"
+
+# This will launch mpv in the background.
+bind m exec mpv --no-terminal "%l" &
+
+# This will launch mpv interactively.
+bind M exec mpv "%l"

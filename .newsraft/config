@@ -27,6 +27,8 @@ color-list-section-failed	red default
 
 # Bindings
 bind b exec brave "%l" &
-bind l exec lynx "%l" &
+bind l exec st -e lynx "%l" &
 bind f exec feh "%l"
 bind m exec mpv --no-terminal "%l" &
+bind w exec st -e w3m "%l" &
+

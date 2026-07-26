@@ -6,7 +6,7 @@ Xft.hinting: 1
 Xft.antialias: 1
 Xft.rgba: 1
 
-# Gruvbox Color Scheme
+! Gruvbox Color Scheme
 *foreground:        #ebdbb2
 *background:        #282828
 *.foreground:       #ebdbb2
@@ -14,7 +14,7 @@ Xft.rgba: 1
 *.color0:           #282828
 *color0:            #282828
 *.color1:           #cc241d
-*color1:            #cc241s
+*color1:            #cc241d
 *.color2:           #98971a
 *color2:            #98971a
 *.color3:           #d79921

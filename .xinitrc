@@ -8,6 +8,8 @@ usermodmap="$HOME/.Xmodmap"
 sysresources="$xinitdir/.Xresources"
 sysmodmap="$xinitdir/.Xmodmap"
 
+# Start styli.sh and xrdb merge from changes to colors.Xresources
+
 # merge in defaults and keymaps
 
 if [ -f "$sysresources" ]; then
@@ -45,6 +47,7 @@ fi
 exec picom --config ~/.config/picom.conf &
 exec redshift-gtk &
 exec dunst &
+exec styli.sh -w 4096 -h 2304 &
 
 # Start the window manager
 exec dwm

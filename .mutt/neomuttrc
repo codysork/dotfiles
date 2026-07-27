@@ -1,0 +1,80 @@
+# vim-filetype: neomuttrc
+# @file neomuttrc
+# @author Cody Sork <codysork@gmail.com>
+# @created 2026-07-20
+# @modified 2026-07-27
+# @version 0.2.0
+# @about My mutt configuration using all of my accounts
+
+#-----------------------------------------------------------#
+#                        Changelog                          #
+#-----------------------------------------------------------#
+
+# 0.2.0
+# - Support for opening emails in interactive mode in w3m
+# - Added sidebar navigation
+# - Added support for opening emails in browser (mailcap)
+
+# 0.1.0
+# - Support for multiple accounts
+# - Support for opening html emails as plain text in w3m
+
+#-----------------------------------------------------------#
+#                     General Options                       #
+#-----------------------------------------------------------#
+
+# Basics ----------------------------------------------------
+set header_cache=~/.cache/mutt"
+set imap_check_subscribed
+set imap_keepalive = 300
+unset imap_passive
+set mail_check = 60
+set mbox_type = Maildir
+set mailcap_path = ~/.mutt/mailcap
+
+# Support for HTML ------------------------------------------
+auto_view text/html
+alternative_order text/plain text/enriched text/html
+
+# TUI -------------------------------------------------------
+set sidebar_visible = yes
+
+#-----------------------------------------------------------#
+#                codysork@gmail.com (Main)                  #
+#-----------------------------------------------------------#
+
+source ~/.mutt/codysork@gmail.com
+folder-hook $folder 'source ~/.mutt/codysork@gmail.com'
+
+#-----------------------------------------------------------#
+#             rimepemachodar@gmail.com (Dharma)             #
+#-----------------------------------------------------------#
+
+source ~/.mutt/rimepemachodar@gmail.com
+folder-hook $folder 'source ~/.mutt/rimepemachodar@gmail.com'
+
+# Move back to main account after all accounts are loaded
+source ~/.mutt/codysork@gmail.com
+
+#-----------------------------------------------------------#
+#                    Bindings & Macros                      #
+#-----------------------------------------------------------#
+
+# Email Accounts --------------------------------------------
+macro index,pager <f2> '<sync-mailbox><enter-command>source ~/.mutt/codysork@gmail.com<enter><change-folder>!<enter>'
+macro index,pager <f3> '<sync-mailbox><enter-command>source ~/.mutt/rimepemachodar@gmail.com<enter><change-folder>!<enter>'
+
+# Opening Emails and Attachments ----------------------------
+macro pager \cl <pipe-entry>'urlview'<enter> 'Follow links with urlview'
+
+# Sidebar Navigation ----------------------------------------
+bind index,pager \ch sidebar-toggle-visible
+bind index,pager \ck sidebar-prev
+bind index,pager \cj sidebar-next
+bind index,pager \cl sidebar-open
+
+#-----------------------------------------------------------#
+#                         Colors                            #
+#-----------------------------------------------------------#
+
+source ~/.mutt/colors.muttrc

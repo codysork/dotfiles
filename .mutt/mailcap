@@ -1,0 +1,7 @@
+# @file mailcap
+# @author Cody Sork <codysork@gmail.com>
+# @created 2026-07-20
+# @modified 2026-07-27
+
+text/html; cp %s /tmp/email.html && $BROWSER /tmp/email.html
+text/html; w3m -I %{charset} -T text/html -dump; copiousoutput;
